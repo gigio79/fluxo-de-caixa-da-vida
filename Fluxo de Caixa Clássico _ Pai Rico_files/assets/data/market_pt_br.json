@@ -1,0 +1,450 @@
+{
+    "marketDeck":  {
+                       "cards":  [
+                                     {
+                                         "title":  "COMPRADOR DE CONDOMINIO – 2QU/1BA",
+                                         "copy1":  "Oferecem R$ 65.000 por um condominio 2/1 para aluguel. O comprador tem financiamento proprio.",
+                                         "copy2":  "Se voce vender, quite a hipoteca relacionada e abra mao do fluxo de caixa que voce recebe atualmente desta propriedade.",
+                                         "rule":  "Todos podem vender a este preco.",
+                                         "type":  "market_sell",
+                                         "key":  "2/1CONDO",
+                                         "cost":  65000,
+                                         "queue":  "true"
+                                     },
+                                     {
+                                         "title":  "COMPRADOR DE CONDOMINIO – 2QU/1BA",
+                                         "copy1":  "Oferecem R$ 55.000 por um condominio 2/1 para aluguel. O comprador tem financiamento proprio.",
+                                         "copy2":  "Se voce vender, quite a hipoteca relacionada e abra mao do fluxo de caixa que voce recebe atualmente desta propriedade.",
+                                         "rule":  "Todos podem vender a este preco.",
+                                         "type":  "market_sell",
+                                         "key":  "2/1CONDO",
+                                         "cost":  55000,
+                                         "queue":  "true"
+                                     },
+                                     {
+                                         "title":  "COMPRADOR DE CONDOMINIO – 2QU/1BA",
+                                         "copy1":  "Oferecem R$ 55.000 por um condominio 2/1 para aluguel. O comprador tem financiamento proprio.",
+                                         "copy2":  "Se voce vender, quite a hipoteca relacionada e abra mao do fluxo de caixa que voce recebe atualmente desta propriedade.",
+                                         "rule":  "Todos podem vender a este preco.",
+                                         "type":  "market_sell",
+                                         "key":  "2/1CONDO",
+                                         "cost":  55000,
+                                         "queue":  "true"
+                                     },
+                                     {
+                                         "title":  "COMPRADOR DE CONDOMINIO – 2QU/1BA",
+                                         "copy1":  "Oferecem R$ 45.000 por um condominio 2/1 para aluguel. O comprador tem financiamento proprio.",
+                                         "copy2":  "Se voce vender, quite a hipoteca relacionada e abra mao do fluxo de caixa que voce recebe atualmente desta propriedade.",
+                                         "rule":  "Todos podem vender a este preco.",
+                                         "type":  "market_sell",
+                                         "key":  "2/1CONDO",
+                                         "cost":  45000,
+                                         "queue":  "true"
+                                     },
+                                     {
+                                         "title":  "COMPRADOR DE CASA – 3QU/2BA",
+                                         "copy1":  "Oferecem R$ 135.000 por uma casa 3/2 para aluguel. O comprador tem financiamento proprio.",
+                                         "copy2":  "Se voce vender, quite a hipoteca relacionada e abra mao do fluxo de caixa que voce recebe atualmente desta propriedade.",
+                                         "rule":  "Todos podem vender a este preco.",
+                                         "type":  "market_sell",
+                                         "key":  "3/2HOUSE",
+                                         "cost":  135000,
+                                         "queue":  "true"
+                                     },
+                                     {
+                                         "title":  "COMPRADOR DE CASA – 3QU/2BA",
+                                         "copy1":  "Oferecem R$ 135.000 por uma casa 3/2 para aluguel. O comprador tem financiamento proprio.",
+                                         "copy2":  "Se voce vender, quite a hipoteca relacionada e abra mao do fluxo de caixa que voce recebe atualmente desta propriedade.",
+                                         "rule":  "Todos podem vender a este preco.",
+                                         "type":  "market_sell",
+                                         "key":  "3/2HOUSE",
+                                         "cost":  135000,
+                                         "queue":  "true"
+                                     },
+                                     {
+                                         "title":  "COMPRADOR DE CASA – 3QU/2BA",
+                                         "copy1":  "Oferecem R$ 110.000 por uma casa 3/2 para aluguel. O comprador tem financiamento proprio.",
+                                         "copy2":  "Se voce vender, quite a hipoteca relacionada e abra mao do fluxo de caixa que voce recebe atualmente desta propriedade.",
+                                         "rule":  "Todos podem vender a este preco.",
+                                         "type":  "market_sell",
+                                         "key":  "3/2HOUSE",
+                                         "cost":  110000,
+                                         "queue":  "true"
+                                     },
+                                     {
+                                         "title":  "COMPRADOR DE CASA – 3QU/2BA",
+                                         "copy1":  "Oferecem R$ 100.000 por uma casa 3/2 para aluguel. O comprador tem financiamento proprio.",
+                                         "copy2":  "Se voce vender, quite a hipoteca relacionada e abra mao do fluxo de caixa que voce recebe atualmente desta propriedade.",
+                                         "rule":  "Todos podem vender a este preco.",
+                                         "type":  "market_sell",
+                                         "key":  "3/2HOUSE",
+                                         "cost":  100000,
+                                         "queue":  "true"
+                                     },
+                                     {
+                                         "title":  "COMPRADOR DE CASA – 3QU/2BA",
+                                         "copy1":  "Oferecem R$ 100.000 por uma casa 3/2 para aluguel. O comprador tem financiamento proprio.",
+                                         "copy2":  "Se voce vender, quite a hipoteca relacionada e abra mao do fluxo de caixa que voce recebe atualmente desta propriedade.",
+                                         "rule":  "Todos podem vender a este preco.",
+                                         "type":  "market_sell",
+                                         "key":  "3/2HOUSE",
+                                         "cost":  100000,
+                                         "queue":  "true"
+                                     },
+                                     {
+                                         "title":  "COMPRADOR DE CASA – 3QU/2BA",
+                                         "copy1":  "Oferecem R$ 90.000 por uma casa 3/2 para aluguel. O comprador tem financiamento proprio.",
+                                         "copy2":  "Se voce vender, quite a hipoteca relacionada e abra mao do fluxo de caixa que voce recebe atualmente desta propriedade.",
+                                         "rule":  "Todos podem vender a este preco.",
+                                         "type":  "market_sell",
+                                         "key":  "3/2HOUSE",
+                                         "cost":  90000,
+                                         "queue":  "true"
+                                     },
+                                     {
+                                         "title":  "COMPRADOR DE CASA – 3QU/2BA",
+                                         "copy1":  "Oferecem R$ 65.000 por uma casa 3/2 para aluguel. O comprador tem financiamento proprio.",
+                                         "copy2":  "Se voce vender, quite a hipoteca relacionada e abra mao do fluxo de caixa que voce recebe atualmente desta propriedade.",
+                                         "rule":  "Todos podem vender a este preco.",
+                                         "type":  "market_sell",
+                                         "key":  "3/2HOUSE",
+                                         "cost":  65000,
+                                         "queue":  "true"
+                                     },
+                                     {
+                                         "title":  "COMPRADOR DE PREDIOS",
+                                         "copy1":  "Oferecem R$ 40.000 por unidade por todas as unidades em qualquer combinacao de duplexes, predios de 4 ou 8 unidades. O comprador tem financiamento proprio.",
+                                         "copy2":  "Se voce vender, quite a hipoteca relacionada e abra mao do fluxo de caixa que voce recebe atualmente desta propriedade.",
+                                         "rule":  "Todos podem vender a este preco.",
+                                         "type":  "market_sell",
+                                         "key":  "PLEX",
+                                         "cost":  40000,
+                                         "queue":  "true"
+                                     },
+                                     {
+                                         "title":  "COMPRADOR DE PREDIOS",
+                                         "copy1":  "Oferecem R$ 40.000 por unidade por todas as unidades em qualquer combinacao de duplexes, predios de 4 ou 8 unidades. O comprador tem financiamento proprio.",
+                                         "copy2":  "Se voce vender, quite a hipoteca relacionada e abra mao do fluxo de caixa que voce recebe atualmente desta propriedade.",
+                                         "rule":  "Todos podem vender a este preco.",
+                                         "type":  "market_sell",
+                                         "key":  "PLEX",
+                                         "cost":  40000,
+                                         "queue":  "true"
+                                     },
+                                     {
+                                         "title":  "COMPRADOR DE PREDIOS",
+                                         "copy1":  "Oferecem R$ 35.000 por unidade por todas as unidades em qualquer combinacao de duplexes, predios de 4 ou 8 unidades. O comprador tem financiamento proprio.",
+                                         "copy2":  "Se voce vender, quite a hipoteca relacionada e abra mao do fluxo de caixa que voce recebe atualmente desta propriedade.",
+                                         "rule":  "Todos podem vender a este preco.",
+                                         "type":  "market_sell",
+                                         "key":  "PLEX",
+                                         "cost":  35000,
+                                         "queue":  "true"
+                                     },
+                                     {
+                                         "title":  "COMPRADOR DE PREDIOS",
+                                         "copy1":  "Oferecem R$ 35.000 por unidade por todas as unidades em qualquer combinacao de duplexes, predios de 4 ou 8 unidades. O comprador tem financiamento proprio.",
+                                         "copy2":  "Se voce vender, quite a hipoteca relacionada e abra mao do fluxo de caixa que voce recebe atualmente desta propriedade.",
+                                         "rule":  "Todos podem vender a este preco.",
+                                         "type":  "market_sell",
+                                         "key":  "PLEX",
+                                         "cost":  35000,
+                                         "queue":  "true"
+                                     },
+                                     {
+                                         "title":  "COMPRADOR DE PREDIOS",
+                                         "copy1":  "Oferecem R$ 35.000 por unidade por todas as unidades em qualquer combinacao de duplexes, predios de 4 ou 8 unidades. O comprador tem financiamento proprio.",
+                                         "copy2":  "Se voce vender, quite a hipoteca relacionada e abra mao do fluxo de caixa que voce recebe atualmente desta propriedade.",
+                                         "rule":  "Todos podem vender a este preco.",
+                                         "type":  "market_sell",
+                                         "key":  "PLEX",
+                                         "cost":  35000,
+                                         "queue":  "true"
+                                     },
+                                     {
+                                         "title":  "COMPRADOR DE PREDIOS",
+                                         "copy1":  "Oferecem R$ 30.000 por unidade por todas as unidades em qualquer combinacao de duplexes, predios de 4 ou 8 unidades. O comprador tem financiamento proprio.",
+                                         "copy2":  "Se voce vender, quite a hipoteca relacionada e abra mao do fluxo de caixa que voce recebe atualmente desta propriedade.",
+                                         "rule":  "Todos podem vender a este preco.",
+                                         "type":  "market_sell",
+                                         "key":  "PLEX",
+                                         "cost":  30000,
+                                         "queue":  "true"
+                                     },
+                                     {
+                                         "title":  "COMPRADOR DE PREDIOS",
+                                         "copy1":  "Oferecem R$ 30.000 por unidade por todas as unidades em qualquer combinacao de duplexes, predios de 4 ou 8 unidades. O comprador tem financiamento proprio.",
+                                         "copy2":  "Se voce vender, quite a hipoteca relacionada e abra mao do fluxo de caixa que voce recebe atualmente desta propriedade.",
+                                         "rule":  "Todos podem vender a este preco.",
+                                         "type":  "market_sell",
+                                         "key":  "PLEX",
+                                         "cost":  30000,
+                                         "queue":  "true"
+                                     },
+                                     {
+                                         "title":  "COMPRADOR DE PREDIOS",
+                                         "copy1":  "Oferecem R$ 30.000 por unidade por todas as unidades em qualquer combinacao de duplexes, predios de 4 ou 8 unidades. O comprador tem financiamento proprio.",
+                                         "copy2":  "Se voce vender, quite a hipoteca relacionada e abra mao do fluxo de caixa que voce recebe atualmente desta propriedade.",
+                                         "rule":  "Todos podem vender a este preco.",
+                                         "type":  "market_sell",
+                                         "key":  "PLEX",
+                                         "cost":  30000,
+                                         "queue":  "true"
+                                     },
+                                     {
+                                         "title":  "COMPRADOR DE PREDIOS",
+                                         "copy1":  "Oferecem R$ 25.000 por unidade por todas as unidades em qualquer combinacao de duplexes, predios de 4 ou 8 unidades. O comprador tem financiamento proprio.",
+                                         "copy2":  "Se voce vender, quite a hipoteca relacionada e abra mao do fluxo de caixa que voce recebe atualmente desta propriedade.",
+                                         "rule":  "Todos podem vender a este preco.",
+                                         "type":  "market_sell",
+                                         "key":  "PLEX",
+                                         "cost":  25000,
+                                         "queue":  "true"
+                                     },
+                                     {
+                                         "title":  "COMPRADOR DE PREDIOS",
+                                         "copy1":  "Oferecem R$ 25.000 por unidade por todas as unidades em qualquer combinacao de duplexes, predios de 4 ou 8 unidades. O comprador tem financiamento proprio.",
+                                         "copy2":  "Se voce vender, quite a hipoteca relacionada e abra mao do fluxo de caixa que voce recebe atualmente desta propriedade.",
+                                         "rule":  "Todos podem vender a este preco.",
+                                         "type":  "market_sell",
+                                         "key":  "PLEX",
+                                         "cost":  25000,
+                                         "queue":  "true"
+                                     },
+                                     {
+                                         "title":  "COMPRADOR DE PREDIO DE APARTAMENTOS",
+                                         "copy1":  "Oferecem R$ 45.000 por unidade por todas as unidades de predios de apartamentos de qualquer tamanho. O comprador tem financiamento proprio.",
+                                         "copy2":  "Se voce vender, quite a hipoteca relacionada e abra mao do fluxo de caixa que voce recebe atualmente desta propriedade.",
+                                         "rule":  "Todos podem vender a este preco.",
+                                         "type":  "market_sell",
+                                         "key":  "APTHOUSE",
+                                         "cost":  45000,
+                                         "queue":  "true"
+                                     },
+                                     {
+                                         "title":  "COMPRADOR DE PREDIO DE APARTAMENTOS",
+                                         "copy1":  "Oferecem R$ 40.000 por unidade por todas as unidades de predios de apartamentos de qualquer tamanho. O comprador tem financiamento proprio.",
+                                         "copy2":  "Se voce vender, quite a hipoteca relacionada e abra mao do fluxo de caixa que voce recebe atualmente desta propriedade.",
+                                         "rule":  "Todos podem vender a este preco.",
+                                         "type":  "market_sell",
+                                         "key":  "APTHOUSE",
+                                         "cost":  40000,
+                                         "queue":  "true"
+                                     },
+                                     {
+                                         "title":  "COMPRADOR DE PREDIO DE APARTAMENTOS",
+                                         "copy1":  "Um fundo imobiliario (REIT) oferece R$ 30.000 por unidade por todas as unidades de predios de apartamentos com 12 unidades ou mais. O comprador tem recursos da venda de outro conjunto em outra cidade.",
+                                         "copy2":  "Se voce vender, quite a hipoteca relacionada e abra mao do fluxo de caixa que voce recebe atualmente desta propriedade.",
+                                         "rule":  "Todos podem vender a este preco.",
+                                         "type":  "market_sell",
+                                         "key":  "APTHOUSE",
+                                         "cost":  30000,
+                                         "queue":  "true"
+                                     },
+                                     {
+                                         "title":  "COMPRADOR DE PREDIO DE APARTAMENTOS",
+                                         "copy1":  "Oferecem R$ 25.000 por unidade por todas as unidades de predios de apartamentos de qualquer tamanho. O comprador tem financiamento proprio.",
+                                         "copy2":  "Se voce vender, quite a hipoteca relacionada e abra mao do fluxo de caixa que voce recebe atualmente desta propriedade.",
+                                         "rule":  "Todos podem vender a este preco.",
+                                         "type":  "market_sell",
+                                         "key":  "APTHOUSE",
+                                         "cost":  25000,
+                                         "queue":  "true"
+                                     },
+                                     {
+                                         "title":  "A PEQUENA EMPRESA MELHORA",
+                                         "copy1":  "A pequena empresa que voce fundou ganhou um premio do setor pela inovacao do produto.",
+                                         "copy2":  "A grande divulgacao faz suas vendas dobrarem. Isso exige mais tempo seu, mas a Renda Liquida Mensal sobe R$ 250.",
+                                         "rule":  "Quem possuir um negocio que fundou e afetado e aumenta seu fluxo de caixa em R$ 250 por mes em todos esses negocios.",
+                                         "type":  "market_startup",
+                                         "key":  "250",
+                                         "cost":  0,
+                                         "queue":  "true"
+                                     },
+                                     {
+                                         "title":  "A PEQUENA EMPRESA MELHORA",
+                                         "copy1":  "A pequena empresa que voce fundou encontrou uma grande empresa para distribuir seu produto. Suas vendas aumentam 150%.",
+                                         "copy2":  "Isso traz mais problemas e exige mais tempo seu, mas a Renda Liquida Mensal sobe R$ 400.",
+                                         "rule":  "Quem possuir um negocio que fundou e afetado e aumenta seu fluxo de caixa em R$ 400 por mes em todos esses negocios.",
+                                         "type":  "market_startup",
+                                         "key":  "400",
+                                         "cost":  0,
+                                         "queue":  "true"
+                                     },
+                                     {
+                                         "title":  "A INFLAÇÃO ATACA",
+                                         "copy1":  "A inflacao vai a 10%. As taxas de juros dos financiamentos imobiliarios sobem para 20%.",
+                                         "copy2":  "Voce financiou com hipotecas de taxa variavel. Voce deve devolver sua(s) casa(s) 3Qu/2Ba ao banco. Voce perde o fluxo de caixa destas propriedades.",
+                                         "rule":  "Todas as casas 3Qu/2Ba para aluguel que voce (e nao outros jogadores) possui estao agora em execucao hipotecaria.",
+                                         "type":  "market_lose",
+                                         "key":  "3/2HOUSE",
+                                         "cost":  0
+                                     },
+                                     {
+                                         "title":  "AS TAXAS DE JUROS CAEM",
+                                         "copy1":  "As taxas de juros dos financiamentos imobiliarios caem para 5%.",
+                                         "copy2":  "Se voce (e nao outros jogadores) possuir qualquer casa 3Qu/2Ba para aluguel, pode vende-las por R$ 50.000 a mais que o custo original.",
+                                         "rule":  "Se voce vender, quite a hipoteca relacionada e abra mao do fluxo de caixa que voce recebe atualmente de cada propriedade.",
+                                         "type":  "market_selladd",
+                                         "key":  "3/2HOUSE",
+                                         "cost":  50000
+                                     },
+                                     {
+                                         "title":  "SOCIEDADE LIMITADA VENDIDA",
+                                         "copy1":  "O negocio foi vendido e voce recebe tres vezes o seu custo original pela sua parte.",
+                                         "copy2":  "Voce concordou em vender se, e quando, a fundadora vendesse - e foi o que ela acabou de fazer. Os novos proprietarios tem financiamento proprio.",
+                                         "rule":  "Toda sociedade limitada e afetada. Se voce possuir uma sociedade limitada, receba em dinheiro e reduza seus fluxos de caixa imediatamente.",
+                                         "type":  "market_sellmultiply",
+                                         "key":  "PARTNER",
+                                         "cost":  3,
+                                         "queue":  "true"
+                                     },
+                                     {
+                                         "title":  "SOCIEDADE LIMITADA VENDIDA",
+                                         "copy1":  "O negocio foi vendido e voce recebe o dobro do seu custo original pela sua parte.",
+                                         "copy2":  "Voce concordou em vender se, e quando, a fundadora vendesse - e foi o que ela acabou de fazer. Os novos proprietarios tem financiamento proprio.",
+                                         "rule":  "Toda sociedade limitada e afetada. Se voce possuir uma sociedade limitada, receba em dinheiro e reduza seus fluxos de caixa imediatamente.",
+                                         "type":  "market_sellmultiply",
+                                         "key":  "PARTNER",
+                                         "cost":  2,
+                                         "queue":  "true"
+                                     },
+                                     {
+                                         "title":  "SOCIEDADE LIMITADA VENDIDA",
+                                         "copy1":  "O negocio foi vendido e voce recebe o dobro do seu custo original pela sua parte.",
+                                         "copy2":  "Voce concordou em vender se, e quando, a fundadora vendesse - e foi o que ela acabou de fazer. Os novos proprietarios tem financiamento proprio.",
+                                         "rule":  "Toda sociedade limitada e afetada. Se voce possuir uma sociedade limitada, receba em dinheiro e reduza seus fluxos de caixa imediatamente.",
+                                         "type":  "market_sellmultiply",
+                                         "key":  "PARTNER",
+                                         "cost":  2,
+                                         "queue":  "true"
+                                     },
+                                     {
+                                         "title":  "INQUILINO CAUSA DANOS A SUA PROPRIEDADE",
+                                         "copy1":  "Inquilino nao paga o aluguel por 2 meses e depois foge da cidade deixando danos a sua propriedade para aluguel.",
+                                         "copy2":  "O seguro cobre a maior parte dos danos e custos, mas voce ainda paga R$ 500 do proprio bolso. Pague R$ 500 se possuir qualquer propriedade para aluguel.",
+                                         "rule":  "Apenas a pessoa que comprar esta carta paga.",
+                                         "type":  "market_fee",
+                                         "key":  "rental",
+                                         "cost":  500
+                                     },
+                                     {
+                                         "title":  "INQUILINO CAUSA DANOS A SUA PROPRIEDADE",
+                                         "copy1":  "Inquilino se recusa a pagar o aluguel depois de perder o emprego. Quando voce consegue despeja-lo, descobre danos significativos a sua propriedade.",
+                                         "copy2":  "O seguro cobre a maior parte dos danos e custos, mas voce ainda paga R$ 1.000 do proprio bolso. Pague R$ 1.000 se possuir qualquer imovel para aluguel.",
+                                         "rule":  "Apenas a pessoa que comprar esta carta paga.",
+                                         "type":  "market_fee",
+                                         "key":  "rental",
+                                         "cost":  1000
+                                     },
+                                     {
+                                         "title":  "A REDE DE ESGOTO ESTOURA",
+                                         "copy1":  "Agua por toda parte no seu predio de 8 unidades! A rede de esgoto rompida precisa de conserto imediato.",
+                                         "copy2":  "Se voce possuir um predio de 8 unidades, pague R$ 2.000 pela nova tubulacao. (Emprestimo bancario disponivel nos termos usuais.)",
+                                         "rule":  "Se voce possuir mais de um predio de 8 unidades, pague os reparos de apenas um.",
+                                         "type":  "market_fee",
+                                         "key":  "8PLEX",
+                                         "cost":  2000
+                                     },
+                                     {
+                                         "title":  "COLECIONADOR QUER MOEDAS DE OURO",
+                                         "copy1":  "Colecionador procurando moedas de ouro \u0027peso de oito\u0027 espanholas autenticas de 1500 do Novo Mundo (somente Casa da Moeda de Havana).",
+                                         "copy2":  "Oferta em dinheiro de R$ 5.000.",
+                                         "rule":  "Oferta em dinheiro de R$ 5.000 por cada moeda para todos.",
+                                         "type":  "market_sell",
+                                         "key":  "coin",
+                                         "cost":  5000,
+                                         "queue":  "true"
+                                     },
+                                     {
+                                         "title":  "O PRECO DO OURO DISPARA",
+                                         "copy1":  "Disturbios no Oriente Medio. Precos do petroleo ameacados. O preco do ouro dispara para R$ 600 a onca.",
+                                         "copy2":  "",
+                                         "rule":  "Quem possuir Krugerrands de 1 onca pode vender a este preco.",
+                                         "type":  "market_sell",
+                                         "key":  "gold",
+                                         "cost":  600,
+                                         "queue":  "true"
+                                     },
+                                     {
+                                         "title":  "COMPRADOR DE EMPRESA DE WIDGETS",
+                                         "copy1":  "Engenheiro/inventor dono de fabrica de maquinas oferece R$ 50.000 em dinheiro pelo metodo inovador de fabricar widgets.",
+                                         "copy2":  "Se voce vender, voce abrira mao do fluxo de caixa que recebe atualmente desta empresa.",
+                                         "rule":  "Quem possuir uma empresa de widgets pode vender a este preco.",
+                                         "type":  "market_sell",
+                                         "key":  "widget",
+                                         "cost":  50000,
+                                         "queue":  "true"
+                                     },
+                                     {
+                                         "title":  "EMPRESA DE SOFTWARE",
+                                         "copy1":  "Grande empresa integrada de software oferece R$ 100.000 em dinheiro pelo programa de software inovador e pela empresa relacionada.",
+                                         "copy2":  "Se voce vender, voce abrira mao do fluxo de caixa que recebe atualmente desta empresa.",
+                                         "rule":  "Quem possuir uma empresa de software pode vender a este preco.",
+                                         "type":  "market_sell",
+                                         "key":  "software",
+                                         "cost":  100000,
+                                         "queue":  "true"
+                                     },
+                                     {
+                                         "title":  "DEMANDA POR POUSADAS (BED AND BREAKFAST)",
+                                         "copy1":  "Casal exausto dos empregos corporativos pronto para mudar de vida. Tem muito dinheiro. Procura uma pousada (Bed \u0026 Breakfast) lucrativa. Pagara R$ 250.000 hoje.",
+                                         "copy2":  "Se voce vender, quite a hipoteca relacionada e abra mao do fluxo de caixa que voce recebe atualmente desta propriedade.",
+                                         "rule":  "Quem possuir uma pousada (Bed \u0026 Breakfast) que da lucro pode vender a este preco.",
+                                         "type":  "market_sell",
+                                         "key":  "BED",
+                                         "cost":  250000,
+                                         "queue":  "true"
+                                     },
+                                     {
+                                         "title":  "COMPRADOR DE LAVADOR DE CARROS",
+                                         "copy1":  "Comprador muito interessado procurando um lavador de carros barato. O comprador tem R$ 250.000 em dinheiro para gastar. Esse e o limite dele.",
+                                         "copy2":  "Se voce vender, quite a hipoteca relacionada e abra mao do fluxo de caixa que voce recebe atualmente desta propriedade.",
+                                         "rule":  "Quem possuir um lavador de carros pode vender a este preco.",
+                                         "type":  "market_sell",
+                                         "key":  "CARWASH",
+                                         "cost":  250000,
+                                         "queue":  "true"
+                                     },
+                                     {
+                                         "title":  "CENTRO COMERCIAL PROCURADO",
+                                         "copy1":  "Grande varejista esta se mudando para a sua cidade. Procurando um centro comercial pequeno para comprar.",
+                                         "copy2":  "Se voce vender, voce abrira mao do fluxo de caixa que recebe atualmente desta empresa.",
+                                         "rule":  "Eles estao prontos para pagar R$ 100.000 a quem possuir um centro comercial pequeno.",
+                                         "type":  "market_sell",
+                                         "key":  "MALL",
+                                         "cost":  100000,
+                                         "queue":  "true"
+                                     },
+                                     {
+                                         "title":  "CONSTRUTORA QUER TERRA",
+                                         "copy1":  "Os planejadores da cidade exigem que o construtor faca um parque de 10 acres ou nao vao aprovar o novo loteamento. O construtor precisa de 10 acres com riacho.",
+                                         "copy2":  "Se voce vender, voce abrira mao do fluxo de caixa que recebe atualmente desta empresa.",
+                                         "rule":  "Oferta em dinheiro de R$ 150.000 para quem possuir tal propriedade.",
+                                         "type":  "market_sell",
+                                         "key":  "10ACRES",
+                                         "cost":  150000,
+                                         "queue":  "true"
+                                     },
+                                     {
+                                         "title":  "COMPRADOR PARA 20 ACRES",
+                                         "copy1":  "Construtor quer um lote de 20 acres de terra. Ele vai rezonear de residencial para comercial.",
+                                         "copy2":  "Se voce vender, voce abrira mao do fluxo de caixa que recebe atualmente desta empresa.",
+                                         "rule":  "Oferta em dinheiro de R$ 200.000 para quem possuir 20 acres de terra residencial.",
+                                         "type":  "market_sell",
+                                         "key":  "20ACRES",
+                                         "cost":  200000,
+                                         "queue":  "true"
+                                     },
+                                     {
+                                         "title":  "COMPRADOR DE CASA - 3QU/2BA",
+                                         "copy1":  "Seu cunhado perdeu o emprego e quer comprar a sua casa 3/2 para aluguel. Ele promete pagar R$ 100.000 daqui a quatro anos, mas nao tem renda nem economias. Ele pode pagar um valor mensal pequeno, mas sem entrada...",
+                                         "copy2":  "Se voce vender nas condicoes dele, seu fluxo de caixa cai R$ 500 por mes, ate voce receber os R$ 100.000.",
+                                         "rule":  "",
+                                         "type":  "market_brother",
+                                         "key":  "3/2HOUSE",
+                                         "cost":  500
+                                     }
+                                 ]
+                   }
+}

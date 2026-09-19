@@ -1,0 +1,365 @@
+{
+    "fasttrack":  {
+                      "spaces":  [
+                                     {
+                                         "reward":  500000,
+                                         "cost":  25000,
+                                         "id":  23,
+                                         "copy1":  "Compre 250.000 acoes a 10 centavos/acao. Se voce tirar 6 em um dos dados, as acoes vao a R$ 2/acao - receba R$ 500.000 em dinheiro do banco. Se tirar menos que 6, receba R$ 0.",
+                                         "title":  "IPO DE EMPRESA DE SOFTWARE",
+                                         "rollmin":  6,
+                                         "type":  "investment",
+                                         "stock":  "true",
+                                         "icon":  "software_co._ipo"
+                                     },
+                                     {
+                                         "id":  22,
+                                         "title":  "7 MARAVILHAS DO MUNDO",
+                                         "copy1":  "Va de aviao, barco, bicicleta, camelo, canoa e limusine as 7 Maravilhas do Mundo. Luxo de primeira classe do inicio ao fim!",
+                                         "type":  "dream",
+                                         "icon":  "7_wonders_of_the_world",
+                                         "cost":  200000
+                                     },
+                                     {
+                                         "id":  20,
+                                         "title":  "CENTRO DE PESQUISAS CONTRA O CANCER E A AIDS",
+                                         "copy1":  "O seu dinheiro reune os melhores pesquisadores e medicos em um so lugar, dedicados a eliminar essas duas doencas.",
+                                         "type":  "dream",
+                                         "icon":  "research_center_for_cancer_and_aids",
+                                         "cost":  225000
+                                     },
+                                     {
+                                         "cost":  200000,
+                                         "id":  19,
+                                         "copy1":  "+R$ 8.000/mes de fluxo de caixa, retorno de 48% sobre o capital",
+                                         "title":  "LOJAS DE CAMISETAS",
+                                         "cashflow":  8000,
+                                         "type":  "investment",
+                                         "copy2":  "(5 PONTOS DE VENDA)",
+                                         "icon":  "t_shirt_stores"
+                                     },
+                                     {
+                                         "id":  18,
+                                         "title":  "JANTAR COM O PRESIDENTE",
+                                         "copy1":  "Compre uma mesa para 10 amigos jantarem com o Presidente em um baile de gala para dignitarios visitantes do mundo todo.",
+                                         "type":  "dream",
+                                         "icon":  "dinner_with_the_president",
+                                         "cost":  100000
+                                     },
+                                     {
+                                         "cost":  300000,
+                                         "id":  17,
+                                         "copy1":  "+R$ 75.000/mes de fluxo de caixa se voce tirar 4 ou mais em um dos dados; caso contrario, R$ 0 de fluxo de caixa",
+                                         "title":  "NEGOCIO DE PETROLEO RUSSO",
+                                         "rollmin":  4,
+                                         "cashflow":  75000,
+                                         "type":  "investment",
+                                         "icon":  "russian_oil_deal"
+                                     },
+                                     {
+                                         "id":  16,
+                                         "title":  "HELI-ESQUI NOS ALPES SUICOS",
+                                         "copy1":  "Um inverno de heli-esqui durante o dia e diversao nos pontos quentes glamourosos a noite. Um castelo medieval e a sua hospedagem.",
+                                         "type":  "dream",
+                                         "icon":  "heli_ski_the_swiss_alps",
+                                         "cost":  150000
+                                     },
+                                     {
+                                         "cost":  150000,
+                                         "id":  15,
+                                         "title":  "OFICINA DE REPAROS DE AUTOMOVEIS",
+                                         "copy1":  "+R$ 6.000/mes de fluxo de caixa, retorno de 48% sobre o capital",
+                                         "cashflow":  6000,
+                                         "type":  "investment",
+                                         "icon":  "auto_repair_shop"
+                                     },
+                                     {
+                                         "id":  14,
+                                         "title":  "DOM DA FE",
+                                         "copy1":  "A sua organizacao religiosa esta crescendo a passos largos. Novos edificios sao necessarios.",
+                                         "type":  "dream",
+                                         "icon":  "gift_of_faith",
+                                         "cost":  175000
+                                     },
+                                     {
+                                         "cost":  250000,
+                                         "id":  13,
+                                         "copy1":  "+R$ 10.000/mes de fluxo de caixa, retorno de 48% sobre o capital",
+                                         "title":  "SALOES DE BELEZA",
+                                         "cashflow":  10000,
+                                         "type":  "investment",
+                                         "copy2":  "(3 LOJAS)",
+                                         "icon":  "beauty_salons"
+                                     },
+                                     {
+                                         "id":  12,
+                                         "title":  "CANDIDATE-SE A PREFEITO",
+                                         "copy1":  "A sua pericia financeira faz multidoes de pessoas implorarem para voce liderar a cidade. Voce se candidata e, claro, vence. Este e o inicio da sua corrida presidencial.",
+                                         "type":  "dream",
+                                         "icon":  "run_for_mayor",
+                                         "cost":  125000
+                                     },
+                                     {
+                                         "cost":  300000,
+                                         "id":  11,
+                                         "copy1":  "+R$ 10.000/mes de fluxo de caixa, retorno de 40% sobre o capital",
+                                         "title":  "FRANQUIA DE FRANGO",
+                                         "cashflow":  10000,
+                                         "type":  "investment",
+                                         "copy2":  "(2 PONTOS DE VENDA)",
+                                         "icon":  "chicken_franchise"
+                                     },
+                                     {
+                                         "id":  10,
+                                         "title":  "PARQUE COM O SEU NOME",
+                                         "copy1":  "Derrube um armazem abandonado e construa um novo parque recreativo. Doe um destacamento policial para a seguranca do parque.",
+                                         "type":  "dream",
+                                         "icon":  "park_named_after_you",
+                                         "cost":  225000
+                                     },
+                                     {
+                                         "id":  8,
+                                         "title":  "CABANA PARTICULAR DE PESCA EM UM LAGO DE MONTANA",
+                                         "copy1":  "Pesque do cais desta cabana remota. Aproveite 6 meses de solidao. Uso de hidroaviao incluido.",
+                                         "type":  "dream",
+                                         "icon":  "private_fishing_cabin_on_a_montana_lake",
+                                         "cost":  100000
+                                     },
+                                     {
+                                         "cost":  150000,
+                                         "id":  7,
+                                         "copy1":  "+R$ 25.000/mes de fluxo de caixa se voce tirar 3 ou mais em um dos dados; caso contrario, R$ 0 de fluxo de caixa",
+                                         "title":  "COMPRE UMA MINA DE OURO",
+                                         "rollmin":  3,
+                                         "cashflow":  25000,
+                                         "type":  "investment",
+                                         "icon":  "buy_a_gold_mine"
+                                     },
+                                     {
+                                         "id":  6,
+                                         "title":  "FESTIVAL DE CINEMA DE CANNES",
+                                         "copy1":  "Festeje com as estrelas! Tour pela Franca, mais uma semana em Cannes convivendo com celebridades. Voce ate consegue um papel de destaque!",
+                                         "type":  "dream",
+                                         "icon":  "cannes_film_festival",
+                                         "cost":  125000
+                                     },
+                                     {
+                                         "cost":  150000,
+                                         "id":  4,
+                                         "title":  "FABRICA DE PECAS DE CAMINHAO",
+                                         "copy1":  "+R$ 5.000/mes de fluxo de caixa, retorno de 40% sobre o capital",
+                                         "cashflow":  5000,
+                                         "type":  "investment",
+                                         "icon":  "truck_parts_maker"
+                                     },
+                                     {
+                                         "id":  3,
+                                         "title":  "CORRIDA DE IATES",
+                                         "copy1":  "Voce e a sua equipe voam para Perth, Australia. Passe uma semana correndo um 12 metros contra os barcos mais rapidos do mundo.",
+                                         "type":  "dream",
+                                         "icon":  "yacht_racing",
+                                         "cost":  150000
+                                     },
+                                     {
+                                         "cost":  200000,
+                                         "id":  2,
+                                         "title":  "SERVICO DE AQUECIMENTO E AR-CONDICIONADO",
+                                         "copy1":  "+R$ 10.000/mes de fluxo de caixa, retorno de 60% sobre o capital",
+                                         "cashflow":  10000,
+                                         "type":  "investment",
+                                         "icon":  "heat_and_a_c_service"
+                                     },
+                                     {
+                                         "id":  0,
+                                         "title":  "MERCADO DE ACOES PARA CRIANCAS",
+                                         "copy1":  "Financie uma escola de negocios e investimentos para jovens capitalistas, ensinando o basico dos negocios. A escola inclui uma mini bolsa de valores administrada pelos alunos.",
+                                         "type":  "dream",
+                                         "icon":  "stock_market_for_kids",
+                                         "cost":  125000
+                                     },
+                                     {
+                                         "cost":  120000,
+                                         "id":  47,
+                                         "title":  "LOJAS DE ALIMENTO RAPIDO",
+                                         "copy1":  "+R$ 5.000/mes de fluxo de caixa, retorno de 50% sobre o capital",
+                                         "cashflow":  5000,
+                                         "type":  "investment",
+                                         "copy2":  "(3 LOJAS)",
+                                         "icon":  "quick_food_marts"
+                                     },
+                                     {
+                                         "id":  46,
+                                         "title":  "ANTIGAS CIDADES DA ASIA",
+                                         "copy1":  "Um aviao particular e um guia levam voce e 5 amigos aos lugares mais remotos da Asia... onde nenhum turista esteve antes.",
+                                         "type":  "dream",
+                                         "icon":  "ancient_asian_cities",
+                                         "cost":  150000
+                                     },
+                                     {
+                                         "cost":  300000,
+                                         "id":  45,
+                                         "title":  "FRANQUIA DE HAMBURGUER",
+                                         "copy1":  "+R$ 9.500/mes de fluxo de caixa, retorno de 38% sobre o capital",
+                                         "cashflow":  9500,
+                                         "type":  "investment",
+                                         "icon":  "burger_franchise"
+                                     },
+                                     {
+                                         "id":  44,
+                                         "title":  "CAMAROTE PARA TIME PROFISSIONAL",
+                                         "copy1":  "Licencie um camarote particular para 12 pessoas com servico de comida e bebida no estadio do seu time favorito.",
+                                         "type":  "dream",
+                                         "icon":  "pro_team_box_seats",
+                                         "cost":  200000
+                                     },
+                                     {
+                                         "cost":  300000,
+                                         "id":  43,
+                                         "title":  "REDE DE RESTAURANTES FAMILIARES",
+                                         "copy1":  "+R$ 14.000/mes de fluxo de caixa, retorno de 56% sobre o capital",
+                                         "cashflow":  14000,
+                                         "type":  "investment",
+                                         "icon":  "family_restaurant_chain"
+                                     },
+                                     {
+                                         "id":  42,
+                                         "title":  "COMPRE UMA FLORESTA",
+                                         "copy1":  "Pare a perda de arvores antigas. Doe 1.000 acres de floresta e crie uma trilha da natureza para todos aproveitarem.",
+                                         "type":  "dream",
+                                         "icon":  "buy_a_forest",
+                                         "cost":  250000
+                                     },
+                                     {
+                                         "id":  40,
+                                         "title":  "SAFARI FOTOGRAFICO NA AFRICA",
+                                         "copy1":  "Leve 6 amigos em um safario selvagem fotografando os animais mais exoticos do mundo. Aproveite o luxo 5 estrelas na sua tenda.",
+                                         "type":  "dream",
+                                         "icon":  "african_photo_safari",
+                                         "cost":  100000
+                                     },
+                                     {
+                                         "cost":  225000,
+                                         "id":  39,
+                                         "copy1":  "+R$ 50.000/mes de fluxo de caixa se voce tirar 4 ou mais em um dos dados; caso contrario, 0% de fluxo de caixa.",
+                                         "title":  "PROGRAMA DE VENDAS DE UTENSILIOS DE COZINHA",
+                                         "rollmin":  4,
+                                         "cashflow":  50000,
+                                         "type":  "investment",
+                                         "icon":  "cookware_infomercial"
+                                     },
+                                     {
+                                         "id":  38,
+                                         "title":  "MINI-FAZENDA NA CIDADE",
+                                         "copy1":  "Crie um ecossistema de fazenda pratica para as criancas da cidade aprenderem e cuidarem de animais e plantas.",
+                                         "type":  "dream",
+                                         "icon":  "mini_farm_in_the_city",
+                                         "cost":  150000
+                                     },
+                                     {
+                                         "id":  36,
+                                         "title":  "CRUZEIRO PELO MEDITERRANEO",
+                                         "copy1":  "Visite pequenos portos na Italia, na Franca e na Grecia por um mes com 12 amigos no seu iate particular.",
+                                         "type":  "dream",
+                                         "icon":  "cruise_the_mediterranean",
+                                         "cost":  100000
+                                     },
+                                     {
+                                         "cost":  100000,
+                                         "id":  35,
+                                         "copy1":  "+R$ 3.000/mes de fluxo de caixa, retorno de 36% sobre o capital",
+                                         "title":  "LAVANDERIA A SECO",
+                                         "cashflow":  3000,
+                                         "type":  "investment",
+                                         "copy2":  "(2 LOJAS)",
+                                         "icon":  "dry_cleaner"
+                                     },
+                                     {
+                                         "id":  34,
+                                         "title":  "CORPO DA PAZ DOS CAPITALISTAS",
+                                         "copy1":  "Monte escolas de negocios empreendedores nas nacoes do terceiro mundo. Os instrutores sao empresarios doando seu conhecimento e tempo.",
+                                         "type":  "dream",
+                                         "icon":  "capitalists_peace_corps",
+                                         "cost":  200000
+                                     },
+                                     {
+                                         "reward":  500000,
+                                         "cost":  50000,
+                                         "id":  33,
+                                         "copy1":  "Compre 500.000 acoes a 10 centavos/acao. Se voce tirar 5 ou 6 em um dos dados, as acoes vao a R$ 1/acao - receba R$ 500.000 em dinheiro do banco. Se tirar menos que 5, receba R$ 0.",
+                                         "title":  "IPO DE EMPRESA DE BIOTECNOLOGIA",
+                                         "rollmin":  5,
+                                         "type":  "investment",
+                                         "stock":  "true",
+                                         "icon":  "bio_tech_co._ipo"
+                                     },
+                                     {
+                                         "id":  32,
+                                         "title":  "FANTASIA DE ILHA DOS MARES DO SUL",
+                                         "copy1":  "Seja mimado em pleno luxo por dois meses inteiros. Relaxe, descanse em aguas quentes, praias desertas e noites romanticas.",
+                                         "type":  "dream",
+                                         "icon":  "south_sea_island_fantasy",
+                                         "cost":  100000
+                                     },
+                                     {
+                                         "cost":  200000,
+                                         "id":  31,
+                                         "title":  "MINI-ARMAZEM DE 200 UNIDADES",
+                                         "copy1":  "+R$ 6.000/mes de fluxo de caixa, retorno de 36% sobre o capital",
+                                         "cashflow":  6000,
+                                         "type":  "investment",
+                                         "icon":  "200_unit_mini_storage"
+                                     },
+                                     {
+                                         "id":  30,
+                                         "title":  "UMA BIBLIOTECA INFANTIL",
+                                         "copy1":  "Adicione uma ala a biblioteca da sua cidade dedicada a jovens escritores e artistas. Celebridades das artes visitam com frequencia para apoiar o seu trabalho.",
+                                         "type":  "dream",
+                                         "icon":  "a_kids_library",
+                                         "cost":  175000
+                                     },
+                                     {
+                                         "cost":  225000,
+                                         "id":  29,
+                                         "copy1":  "+R$ 7.000/mes de fluxo de caixa, retorno de 37% sobre o capital",
+                                         "title":  "FRANQUIA DE PIZZA",
+                                         "cashflow":  7000,
+                                         "type":  "investment",
+                                         "copy2":  "3 UNIDADES",
+                                         "icon":  "pizza_franchise"
+                                     },
+                                     {
+                                         "id":  28,
+                                         "title":  "GOLFE AO REDOR DO MUNDO",
+                                         "copy1":  "Voce leva 3 amigos em um tour de resort de primeira classe, 5 estrelas, para jogar os 50 melhores campos de golfe do mundo.",
+                                         "type":  "dream",
+                                         "icon":  "golf_around_the_world",
+                                         "cost":  150000
+                                     },
+                                     {
+                                         "cost":  300000,
+                                         "id":  27,
+                                         "title":  "PREDIO DE APARTAMENTOS DE 60 UNIDADES",
+                                         "copy1":  "+R$ 8.000/mes de fluxo de caixa, retorno de 32% sobre o capital",
+                                         "cashflow":  8000,
+                                         "type":  "investment",
+                                         "icon":  "60_unit_apartment_building"
+                                     },
+                                     {
+                                         "id":  26,
+                                         "title":  "SEJA UM \u0027JET-SETTER\u0027",
+                                         "copy1":  "Tenha o seu proprio jato particular disponivel por um ano, para leva-lo a qualquer hora e lugar que o seu coracao desejar.",
+                                         "type":  "dream",
+                                         "icon":  "be_a__jet_setter_",
+                                         "cost":  250000
+                                     },
+                                     {
+                                         "id":  24,
+                                         "title":  "SALVE OS MAMIFEROS DOS OCEANOS",
+                                         "copy1":  "Financie e participe como tripulante de uma expedicao de pesquisa de um mes para proteger os animais marinhos em extincao.",
+                                         "type":  "dream",
+                                         "icon":  "save_the_ocean_mammals",
+                                         "cost":  125000
+                                     }
+                                 ]
+                  }
+}

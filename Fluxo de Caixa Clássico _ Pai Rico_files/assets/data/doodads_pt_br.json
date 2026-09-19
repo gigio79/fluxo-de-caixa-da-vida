@@ -1,0 +1,225 @@
+{
+    "doodadDeck":  {
+                       "cards":  [
+                                     {
+                                         "type":  "doodad",
+                                         "title":  "ALMOCO COM AMIGOS",
+                                         "cost":  40
+                                     },
+                                     {
+                                         "type":  "doodad",
+                                         "title":  "VA AO CASSINO",
+                                         "cost":  200
+                                     },
+                                     {
+                                         "type":  "doodad",
+                                         "title":  "AUDITORIA FISCAL - AI!",
+                                         "cost":  350
+                                     },
+                                     {
+                                         "type":  "doodad",
+                                         "title":  "PINTE A CASA DE NOVO",
+                                         "cost":  600
+                                     },
+                                     {
+                                         "type":  "doodad",
+                                         "title":  "COMPRE NOVAS CAIXAS DE SOM PARA O SEU SOM",
+                                         "cost":  500
+                                     },
+                                     {
+                                         "type":  "doodad",
+                                         "title":  "COMPRE UM NOVO CELULAR",
+                                         "cost":  100
+                                     },
+                                     {
+                                         "type":  "doodad",
+                                         "title":  "COMPRE CDS DE MUSICA NOVOS",
+                                         "cost":  100
+                                     },
+                                     {
+                                         "type":  "doodad",
+                                         "title":  "COMPRE UM LATTE E UM CAPPUCCINO PARA VOCE E UM AMIGO",
+                                         "cost":  10
+                                     },
+                                     {
+                                         "type":  "doodad",
+                                         "title":  "JOGUE 2 RODADAS DE GOLFE",
+                                         "cost":  100
+                                     },
+                                     {
+                                         "type":  "doodad",
+                                         "title":  "VA A UM JOGO DE BOLA",
+                                         "cost":  50
+                                     },
+                                     {
+                                         "type":  "doodad",
+                                         "title":  "COMPRE UM NOVO RELOGIO DE PULSO",
+                                         "cost":  150
+                                     },
+                                     {
+                                         "type":  "doodad",
+                                         "title":  "COMPRE UMA NOVA BOLA DE BOLICHE",
+                                         "cost":  80
+                                     },
+                                     {
+                                         "type":  "doodad",
+                                         "title":  "VA JANTAR FORA",
+                                         "cost":  80
+                                     },
+                                     {
+                                         "type":  "doodad",
+                                         "title":  "JOGUE SEUS NUMEROS DA SORTE NA LOTERIA",
+                                         "cost":  100
+                                     },
+                                     {
+                                         "type":  "doodad",
+                                         "title":  "LIQUIDACAO DE MOVEIS",
+                                         "cost":  300
+                                     },
+                                     {
+                                         "type":  "doodad",
+                                         "title":  "NAO RESISTIU A UMA NOVA PINTURA DE UM ARTISTA LOCAL",
+                                         "cost":  200
+                                     },
+                                     {
+                                         "type":  "doodad",
+                                         "title":  "O AR-CONDICIONADO DO CARRO MORRE",
+                                         "cost":  700
+                                     },
+                                     {
+                                         "type":  "doodad",
+                                         "title":  "O CARRO PRECISA DE PNEUS NOVOS",
+                                         "cost":  300
+                                     },
+                                     {
+                                         "type":  "doodad",
+                                         "title":  "PRECISA DE OCULOS DE SOL NOVOS",
+                                         "cost":  80
+                                     },
+                                     {
+                                         "type":  "doodad",
+                                         "title":  "SEU ANIVERSARIO",
+                                         "cost":  200
+                                     },
+                                     {
+                                         "type":  "doodad",
+                                         "title":  "FERIAS EM FAMILIA",
+                                         "cost":  2000
+                                     },
+                                     {
+                                         "type":  "doodad",
+                                         "title":  "COMPRE UMA NOVA VARA DE PESCA",
+                                         "cost":  100
+                                     },
+                                     {
+                                         "type":  "doodad",
+                                         "title":  "VA A UM SHOW AEREO",
+                                         "cost":  120
+                                     },
+                                     {
+                                         "type":  "doodad",
+                                         "title":  "COMPRE ROUPAS NOVAS",
+                                         "cost":  250
+                                     },
+                                     {
+                                         "type":  "doodad",
+                                         "title":  "BOATO DE DEMISSAO; VOLTE PARA A ESCOLA PARA GANHAR MAIS HABILIDADES",
+                                         "cost":  220
+                                     },
+                                     {
+                                         "type":  "doodad",
+                                         "title":  "REENCONTRO DO ENSINO MEDIO",
+                                         "cost":  250
+                                     },
+                                     {
+                                         "type":  "doodad",
+                                         "title":  "VA A UM SHOW",
+                                         "cost":  180
+                                     },
+                                     {
+                                         "type":  "doodad",
+                                         "title":  "COMPRE BOLAS DE GOLFE NOVAS",
+                                         "cost":  20
+                                     },
+                                     {
+                                         "type":  "doodad",
+                                         "title":  "VISITE O DENTISTA",
+                                         "cost":  100
+                                     },
+                                     {
+                                         "type":  "doodad",
+                                         "title":  "COMPRE UMA MAQUINA DE CAPPUCCINO",
+                                         "cost":  150
+                                     },
+                                     {
+                                         "type":  "doodad",
+                                         "title":  "COMPRE UM PROCESSADOR DE ALIMENTOS",
+                                         "cost":  150
+                                     },
+                                     {
+                                         "type":  "doodad",
+                                         "title":  "COMPRE UMA NOVA RAQUETE DE TENIS",
+                                         "cost":  200
+                                     },
+                                     {
+                                         "type":  "doodad",
+                                         "title":  "COMPRAS!",
+                                         "cost":  350
+                                     },
+                                     {
+                                         "type":  "doodad",
+                                         "title":  "ESTACIONE NA VAGA PARA DEFICIENTES",
+                                         "cost":  100
+                                     },
+                                     {
+                                         "type":  "doodad",
+                                         "title":  "O AQUECEDOR DE AGUA VAZA",
+                                         "cost":  450
+                                     },
+                                     {
+                                         "type":  "doodad",
+                                         "title":  "MENSALIDADE DA FACULDADE DO SEU FILHO",
+                                         "cost":  1500,
+                                         "child":  "has"
+                                     },
+                                     {
+                                         "type":  "doodad",
+                                         "title":  "FESTA DE ANIVERSARIO",
+                                         "cost":  100,
+                                         "child":  "has"
+                                     },
+                                     {
+                                         "type":  "doodad",
+                                         "title":  "SEU FILHO PRECISA DE APARELHO NOS DENTES",
+                                         "cost":  2000,
+                                         "child":  "has"
+                                     },
+                                     {
+                                         "type":  "doodad",
+                                         "title":  "O CASAMENTO DA SUA FILHA",
+                                         "cost":  2000,
+                                         "child":  "has"
+                                     },
+                                     {
+                                         "type":  "doodad",
+                                         "title":  "COMPRE BRINQUEDOS PARA SEUS FILHOS",
+                                         "cost":  50,
+                                         "child":  "per"
+                                     },
+                                     {
+                                         "type":  "specialDoodad",
+                                         "title":  "COMPRE UMA TV DE TELA GRANDE",
+                                         "cost":  4000,
+                                         "payment":  120,
+                                         "copy":  "(Se voce usar cartao de credito, adicione R$ 4.000 ao passivo do cartao de credito e adicione um pagamento de R$ 120 as suas despesas mensais)"
+                                     },
+                                     {
+                                         "type":  "specialDoodad",
+                                         "title":  "BARCO NOVO",
+                                         "cost":  18000,
+                                         "payment":  340,
+                                         "copy":  "(De uma entrada de R$ 1.000 e adicione um emprestimo de barco de R$ 17.000 como um novo passivo e adicione um novo pagamento do emprestimo do barco de R$ 340 as despesas)"
+                                     }
+                                 ]
+                   }
+}

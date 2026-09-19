@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<!-- saved from url=(0085)https://cfclassic.richdad.com/?uid=1789217152426634202&gh=YourName1789217152426634202 -->
+<html><head id="head"><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <title>
+    Register and Play CASHFLOW® Classic Here.
+  </title>
+  <meta name="description" content="CASHFLOW® Classic—How Quickly Can You Become A Millionaire? Play the best online investing game to plan your exit from the Rat Race… for free">
+  
+  <link href="./richdadcfclassic.css" type="text/css" rel="stylesheet">
+
+  <script src="./firebase.js.transferir"></script>
+  <script src="./createjs.min.js.transferir"></script>
+  <script src="./jquery-3.3.1.min.js.transferir"></script>
+
+  <script id="siph" src="./Preloader.js"></script>
+  <script src="./cashflow.js.transferir"></script>
+  <link href="./game.css" rel="stylesheet">
+
+  <!--
+START -- This section grabs Kentico user profile
+ information to be injected into the game.
+-->
+  <script>
+    function getUrlParameter(name) {
+    name = name.replace(/[\[]/, '\\[').replace(/[\]]/, '\\]');
+    var regex = new RegExp('[\\?&]' + name + '=([^&#]*)');
+    var results = regex.exec(location.search);
+    return results === null ? '' : decodeURIComponent(results[1].replace(/\+/g, ' '));
+    };
+
+    var settings = {};
+    settings.userID = getUrlParameter('uid');
+    settings.gameHandle = getUrlParameter('gh');
+    console.log("INFORMATION " + settings.userID + " is " + settings.gameHandle);
+  </script>
+
+  <!--
+END -- This section grabs Kentico user profile
+ information to be injected into the game.
+-->
+<style type="text/css">@font-face {
+	font-family: 'GrantAvenue';
+	font-style: normal;
+	font-weight: normal;
+	src: local('GrantAvenue Regular'), url('https://cfclassic.richdad.com/cashflowjs/assets/fonts/GrantAvenue-Regular.otf') format('truetype');
+}</style></head>
+
+<body class="LTR Safari Chrome Safari44 Chrome44 ENUS ContentBody">
+
+
+  <div class="top-banner-ads">
+
+  </div>
+
+  <div class="game-container">
+
+    <div id="preloader"></div>
+    <div id="ui"></div>
+    <canvas id="stage" class="game-stage" width="1024" height="768"></canvas>
+
+    
+
+  </div>
+
+  <div class="btm-banner-ads">
+
+  </div>
+
+
+
+
+
+</body></html>

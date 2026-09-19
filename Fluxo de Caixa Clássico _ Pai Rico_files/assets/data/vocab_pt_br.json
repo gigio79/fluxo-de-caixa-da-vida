@@ -1,0 +1,631 @@
+{
+  "vocab": {
+    "ok": {
+      "copy": "OK"
+    },
+    "collect": {
+      "copy": "RECEBER"
+    },
+    "borrowMobile": {
+      "copy1": "Informe o valor do empréstimo",
+      "copy2": "valor a pedir emprestado"
+    },
+    "repayMobile": {
+      "copy1": "Informe o valor a pagar",
+      "copy2": "valor a pagar",
+      "copy3": " Valor total do empréstimo R$ "
+    },
+    "sharedOpp": {
+      "copy": "OPORTUNIDADE COMPARTILHADA"
+    },
+    "lobbyconnectionlost": {
+      "copy1": "Desculpe, sua conexão parece ter sido perdida.",
+      "copy2": "Conexão perdida"
+    },
+    "timerSkip": {
+      "copy": " pulou o turno por inatividade."
+    },
+    "timerLeave": {
+      "copy": " está sendo removido do jogo por inatividade."
+    },
+    "dollar": {
+      "copy": "R$ "
+    },
+    "roll": {
+      "copy": "ROLAR"
+    },
+    "requestTime": {
+      "copy": " pediu mais tempo."
+    },
+    "queueText": {
+      "copy": "Disponível no início do seu próximo turno"
+    },
+    "rolled": {
+      "copy": " rolou "
+    },
+    "clickToChat": {
+      "copy": "Clique aqui para conversar"
+    },
+    "x": {
+      "copy": "x"
+    },
+    "amount": {
+      "copy": "Valor: R$ "
+    },
+    "player": {
+      "copy": "Jogador "
+    },
+    "closed": {
+      "copy": "Fechado"
+    },
+    "purchased": {
+      "copy": " Comprou um negócio por R$ "
+    },
+    "buy": {
+      "copy": "COMPRAR"
+    },
+    "empty": {
+      "copy": "--vazio--"
+    },
+    "yes": {
+      "copy": "SIM"
+    },
+    "no": {
+      "copy": "NÃO"
+    },
+    "sell": {
+      "copy": "VENDER"
+    },
+    "pass": {
+      "copy": "PASSAR"
+    },
+    "borrow": {
+      "copy": "PEGAR EMPRESTADO"
+    },
+    "createNew": {
+      "copy": "+ Criar novo jogo"
+    },
+    "plussign": {
+      "copy": "+"
+    },
+    "cancel": {
+      "copy": "CANCELAR"
+    },
+    "quit": {
+      "copy": "SAIR"
+    },
+    "chatTitle": {
+      "copy": "REGISTRO DO CHAT"
+    },
+    "pay": {
+      "copy": "PAGAR"
+    },
+    "done": {
+      "copy": "CONCLUIR"
+    },
+    "join": {
+      "copy": "ENTRAR"
+    },
+    "leftgame": {
+      "copy": "Saiu do jogo"
+    },
+    "donate": {
+      "copy": "DOAR"
+    },
+    "credit": {
+      "copy": "CRÉDITO"
+    },
+    "loan": {
+      "copy": "EMPRÉSTIMO"
+    },
+    "back": {
+      "copy": "VOLTAR"
+    },
+    "cost": {
+      "copy": "Custo: R$ "
+    },
+    "boatLaon": {
+      "copy": " fez um empréstimo para o barco de R$ 17.000."
+    },
+    "creditLoan": {
+      "copy": " fez um empréstimo no cartão de crédito de R$ 4.000."
+    },
+    "sellamount": {
+      "copy": "Valor da venda: R$ "
+    },
+    "cashflow": {
+      "copy": "Fluxo de caixa: R$ "
+    },
+    "downpay": {
+      "copy": "Entrada: R$ "
+    },
+    "return": {
+      "copy": "Retorno possível: R$ "
+    },
+    "range": {
+      "copy": "Faixa de negociação:"
+    },
+    "shares": {
+      "copy": "Ações possuídas:"
+    },
+    "loanamount": {
+      "copy": "Valor do empréstimo: R$ "
+    },
+    "lobbyNotification": {
+      "password": "Senha incorreta",
+      "gameFull": "Jogo cheio",
+      "kicked": "Removido por inatividade",
+      "connectionLost": "Conexão perdida: atualize o navegador",
+      "gameMissing": "Jogo indisponível",
+      "nameInUse": "Nome de jogo já em uso"
+    },
+    "paydayCard": {
+      "title": "DIA DE PAGAMENTO!",
+      "copy1": "Adicione o DIA DE PAGAMENTO ao seu dinheiro em caixa!"
+    },
+    "losecashCard": {
+      "tax": "AUDITORIA!",
+      "lawsuit": "PROCESSO!!",
+      "divorce": "DIVÓRCIO!",
+      "copy1": "Perde metade do seu dinheiro!",
+      "copy2": "Perde todo o seu dinheiro!"
+    },
+    "dreamCard": {
+      "copy1": "Conquiste o seu sonho!",
+      "copy2": "Dinheiro insuficiente para conquistar o seu sonho.",
+      "copy3": "Este é o sonho de outro jogador. O custo do sonho dele aumentou 100%.",
+      "copy4": "Este não é o seu sonho."
+    },
+    "cashflowDayCard": {
+      "title": "DIA DE FLUXO DE CAIXA!",
+      "copy1": "Adicione a renda passiva ao seu dinheiro em caixa!"
+    },
+    "charityCard": {
+      "title": "DOAR PARA A CARIDADE?",
+      "copy1": "Por R$ 100.000, você pode rolar 1, 2 ou 3 dados em cada turno.",
+      "copy2": "Doar R$ 100.000",
+      "copy3": "Doe 10% da sua renda total para rolar 1 ou 2 dados nos seus próximos 3 turnos.",
+      "copy4": "Doar R$ ",
+      "copy5": "Você não tem 10% da sua renda total e não pode doar para a caridade."
+    },
+    "charityChoiceCard": {
+      "title": "ESCOLHA DA CARIDADE!",
+      "copy1": "Você doou para a caridade, escolha 1, 2 ou 3 dados para rolar.",
+      "copy2": "Você doou para a caridade, escolha 1 ou 2 dados para rolar.",
+      "copy3": "Você tem ",
+      "copy4": " jogadas de caridade restantes."
+    },
+    "babyCard": {
+      "title1": "LIMITE DE FILHOS ATINGIDO",
+      "copy1": "Existe um limite de três filhos por jogador.",
+      "title2": "BEBÊ NOVO!",
+      "copy2": "Parabéns! Um filho foi adicionado aos seus dependentes.",
+      "copy3": "As despesas com filhos aumentarão em R$ "
+    },
+    "downsizeCard": {
+      "title1": "REBAIXADO!",
+      "copy1": "Pague R$ ",
+      "copy2": "Pague um conjunto completo das suas despesas, perca dois turnos e a caridade."
+    },
+    "doodadCard": {
+      "copy1": "Pague R$ ",
+      "copy2": "(se você tiver um filho)"
+    },
+    "dealCard": {
+      "title": "OPORTUNIDADE DE NEGÓCIO",
+      "copy1": "Que tipo de negócio você quer?",
+      "small": "Pequenos negócios custam R$ 5.000 ou menos.",
+      "big": "Grandes negócios custam R$ 6.000 ou mais.",
+      "copy2": "PEQUENO",
+      "copy3": "GRANDE"
+    },
+    "investmentCard": {
+      "copy1": "Este investimento já foi comprado e não está mais disponível."
+    },
+    "investmentRollCard": {
+      "copy1": "Você rolou um ",
+      "copy2": "Você ganha R$ ",
+      "copy3": " de fluxo de caixa."
+    },
+    "stockCard": {
+      "copy1": "Você rolou um ",
+      "copy2": "Você ganha R$ ",
+      "copy3": " de fluxo de caixa."
+    },
+    "stockSpecialCard": {
+      "copy1": "Desdobramento de 2 por 1",
+      "copy2": "Agrupamento de 1 por 2"
+    },
+    "stockBuyCard": {
+      "copy1": "Comprar ações: ",
+      "copy2": "Por:"
+    },
+    "stockSellCard": {
+      "copy1": "Vender ações: ",
+      "copy2": "Por:"
+    },
+    "loanCard": {
+      "title": "FAZER UM EMPRÉSTIMO",
+      "copy1": "Fundos insuficientes.",
+      "copy2": "Pegue um empréstimo de R$ ",
+      "copy3": " com uma parcela mensal de R$ "
+    },
+    "marketCard": {
+      "copy1": "Selecione um ativo na sua folha de demonstrativo para fazer este negócio.",
+      "copy2": "Você não tem ativos que correspondam a esta carta de mercado."
+    },
+    "marketSellCard": {
+      "title": "VENDER - ",
+      "copy1": "Custo de venda + Custo original - Hipoteca",
+      "copy2": " + ",
+      "copy3": " - ",
+      "copy4": " = R$ ",
+      "copy5": "Custo de venda * Quantidade possuída - Hipoteca"
+    },
+    "endCard": {
+      "title": "TERMINAR O TURNO",
+      "copy1": "Antes de terminar o turno, revise o seu demonstrativo financeiro. Você também pode aproveitar para pagar passivos ou pegar dinheiro emprestado.",
+      "copy2": "Antes de terminar o turno, você pode revisar o seu demonstrativo financeiro.",
+      "button": "TERMINAR"
+    },
+    "payoffLoanCard": {
+      "title": "PAGAR EMPRÉSTIMO",
+      "copy1": "Selecione um passivo na sua folha de demonstrativo para pagar a sua dívida.",
+      "copy2": "Informe um valor para pagar o seu empréstimo.",
+      "copy3": "Os pagamentos devem ser múltiplos de R$ 1.000",
+      "copy4": "Você não tem dinheiro suficiente para fazer um pagamento deste empréstimo.",
+      "copy5": "Os pagamentos devem ser múltiplos de R$ 1.000.",
+      "copy6": "Pague o seu empréstimo.",
+      "copy7": "Você não tem dinheiro suficiente para pagar este empréstimo."
+    },
+    "borrowCard": {
+      "title": "FAZER UM EMPRÉSTIMO",
+      "copy1": "Os empréstimos devem ser múltiplos de R$ 1.000 com juros de 10% ao mês."
+    },
+    "bankruptCard": {
+      "title": "VOCÊ ESTÁ FALIDO!",
+      "copy1": "O seu fluxo de caixa está negativo: R$ ",
+      "copy2": "Para sair da falência, você precisa de fluxo de caixa positivo.",
+      "copy3": "1. Venda ativos pela metade do valor da entrada.",
+      "copy4": "2. Pague as dívidas.",
+      "copy5": "3. Reduza o valor dos seus empréstimos."
+    },
+    "bankruptSellCard": {
+      "title": "VENDER UM ATIVO"
+    },
+    "bankruptPayCard": {
+      "title": "PAGAR EMPRÉSTIMO",
+      "copy1": "Informe um valor para pagar o seu empréstimo.",
+      "copy2": "Os pagamentos devem ser múltiplos de R$ 1.000",
+      "copy3": "Pague o seu empréstimo.",
+      "copy4": "Você não tem dinheiro suficiente para pagar este empréstimo."
+    },
+    "bankruptHalveCard": {
+      "title": "VOCÊ ESTÁ FALIDO!",
+      "copy1": "Você não tem ativos para vender e não tem fluxo de caixa positivo.",
+      "copy2": "Metade dos seus empréstimos de carro, cartões de crédito e dívidas de varejo foram zerados, juntamente com metade dos seus pagamentos."
+    },
+    "bankruptLoseCard": {
+      "title": "VOCÊ PERDEU!",
+      "copy1": "O seu fluxo de caixa mensal está negativo. Você está oficialmente fora do jogo."
+    },
+    "bankruptCompleteCard": {
+      "title": "FORA DA FALÊNCIA!",
+      "copy1": "O seu fluxo de caixa é maior que as suas despesas e você não está mais falido.",
+      "copy2": "Cuidado para não deixar as suas despesas superarem o seu fluxo de caixa."
+    },
+    "everyoneBankruptCard": {
+      "title": "TODOS NO JOGO FALIRAM. FIM DE JOGO."
+    },
+    "quitCard": {
+      "title": "TEM CERTEZA DE QUE QUER SAIR?"
+    },
+    "timerCard": {
+      "title": "VOCÊ PRECISA DE MAIS TEMPO?"
+    },
+    "winDreamCard": {
+      "title": " VENCEU O JOGO!",
+      "copy1": " venceu o jogo ao conquistar o seu sonho!"
+    },
+    "winPassiveCard": {
+      "title": " VENCEU O JOGO!",
+      "copy1": " venceu o jogo ao elevar a renda passiva acima de R$ 50.000!"
+    },
+    "enterFastTrackCard": {
+      "title": "PARABÉNS!",
+      "title2": "VOCÊ SAIU DA CORRIDA DOS RATOS!",
+      "copy1": " aumentou a sua renda passiva para um valor maior que o total de despesas.",
+      "copy2": "Ele entrou na trilha rápida.",
+      "copy3": "Receba 100x a sua renda passiva. Compre o seu sonho ou aumente a sua Renda do DIA DE FLUXO DE CAIXA em R$ 50.000 para vencer o jogo."
+    },
+    "skipTurnCard": {
+      "title": "TURNO PULADO!",
+      "copy1": " teve o turno pulado."
+    },
+    "dreamopportunity": {
+      "copy": " teve uma oportunidade de sonho!"
+    },
+    "isbankrupt": {
+      "copy": " está falido!"
+    },
+    "receivedpayday": {
+      "copy": " recebeu um DIA DE PAGAMENTO!"
+    },
+    "hadcashflow": {
+      "copy": " teve um dia de FLUXO DE CAIXA!"
+    },
+    "wasdownsized": {
+      "copy": " foi rebaixado e pagou R$ "
+    },
+    "wasdivorced": {
+      "copy": " foi divorciado."
+    },
+    "wasaudited": {
+      "copy": " foi auditado."
+    },
+    "wassued": {
+      "copy": " foi processado."
+    },
+    "ftcharity": {
+      "copy": " doou R$ 100.000 para a caridade."
+    },
+    "gavecharity": {
+      "copy1": " doou R$ ",
+      "copy2": " para a caridade."
+    },
+    "passcharity": {
+      "copy": " recusou uma caridade."
+    },
+    "hadbaby": {
+      "copy": " teve um bebê."
+    },
+    "familylimit": {
+      "copy": " já atingiu o limite de tamanho da família."
+    },
+    "cfstartup": {
+      "copy": " aumentou o fluxo de caixa do seu negócio iniciante em "
+    },
+    "soldstartup": {
+      "copy": " vendeu o seu negócio iniciante por R$ "
+    },
+    "inflation": {
+      "copy1": "A inflação atingiu, ",
+      "copy2": " perdeu um imóvel."
+    },
+    "soldprop": {
+      "copy": " vendeu um imóvel por R$ "
+    },
+    "soldpropbrother": {
+      "copy": " vendeu um imóvel para o seu irmão."
+    },
+    "renatlfee": {
+      "copy1": " foi forçado a pagar uma taxa de R$ ",
+      "copy2": " no seu imóvel alugado."
+    },
+    "8plex": {
+      "copy": " no seu 8-Plex."
+    },
+    "passdeal": {
+      "copy": " passou por um negócio."
+    },
+    "faildeal": {
+      "copy": " falhou na rolagem de um negócio."
+    },
+    "paydoodad": {
+      "copy1": " pagou R$ ",
+      "copy2": " em um mimo."
+    },
+    "payloan": {
+      "copy1": " pagou o seu empréstimo de R$ ",
+      "copy2": " pagou um empréstimo de R$ "
+    },
+    "takeLoan": {
+      "copy1": " fez um empréstimo de R$ ",
+      "copy2": "."
+    },
+    "earndeal": {
+      "copy1": " ganhou R$ ",
+      "copy2": " em um negócio.",
+      "copy3": " gastou R$ "
+    },
+    "nobankrupt": {
+      "copy": " não está mais falido!"
+    },
+    "bankruptlose": {
+      "copy": " faliu e está fora do jogo."
+    },
+    "wongame": {
+      "copy": " venceu o jogo!"
+    },
+    "host": {
+      "copy": "Você agora é o anfitrião!"
+    },
+    "joined": {
+      "copy": "Você entrou em: "
+    },
+    "playerjoined": {
+      "copy": "Um jogador entrou no seu jogo!"
+    },
+    "playerleft": {
+      "copy": "Um jogador saiu do seu jogo."
+    },
+    "turn": {
+      "copy": " é a sua vez de jogar."
+    },
+    "skipturndownsize": {
+      "copy1": " o turno foi pulado por ter sido rebaixado.",
+      "copy2": " turnos restantes.",
+      "copy3": " turno restante."
+    },
+    "skipturnbankrupt": {
+      "copy": " o turno foi pulado por estar falido. "
+    },
+    "charitychoice": {
+      "copy": " teve uma escolha de caridade."
+    },
+    "drew": {
+      "copy1": " tirou uma ",
+      "copy2": " carta."
+    },
+    "escaperace": {
+      "copy": " escapou da Corrida dos Ratos com uma compra de R$ "
+    },
+    "header": {
+      "bankrupt": "Falido: ",
+      "downsized": "Rebaixado: ",
+      "takingturn": "Jogando",
+      "goal": "Meta",
+      "passive": "Renda passiva",
+      "gameover": "Fim de jogo",
+      "wingame": "Venceu o jogo",
+      "fasttrack": "Trilha rápida",
+      "expenses": "Total de despesas"
+    },
+    "clickanywhere": {
+      "copy": "Clique em qualquer lugar para continuar",
+      "clickanywheremobile": "Toque em qualquer lugar para continuar"
+    },
+    "modeselect": {
+      "title": "Selecione um modo de jogo",
+      "passplay": "Passa e joga",
+      "online": "Online"
+    },
+    "lobby": {
+      "title": "Lobby",
+      "titlemobile": "Configuração do jogo",
+      "setuptitle": "Escolha o número de jogadores",
+      "begin": "Começar jogo",
+      "waiting": " Não pronto",
+      "players": " Jogadores",
+      "host": "Aguardando...",
+      "exit": "Sair do jogo",
+      "create": "Criar jogo",
+      "cashflow": "FC",
+      "back": "Voltar",
+      "ready": "Pronto",
+      "clickready": "Clique quando estiver pronto",
+      "clickreadymobile": "Toque quando estiver pronto",
+      "setup": "Configure o seu jogo",
+      "remote": "Remoto",
+      "human": "Humano",
+      "bot": "Robô",
+      "open": "Aberto",
+      "instructions1": "1. Altere o nome do jogo se desejar.",
+      "instructions2": "2. Defina uma senha se quiser um jogo privado.",
+      "instructions3": "3. Selecione o número de jogadores clicando nas caixas de jogadores.",
+      "instructions3mobile": "3. Selecione o número de jogadores tocando nas caixas de jogadores.",
+      "instructions4": "4. Pressione \"Criar jogo\" quando estiver pronto.",
+      "instructions4mobile": "4. Toque em \"Criar jogo\" quando estiver pronto.",
+      "instructionshost1": "1. Altere o seu nome se desejar.",
+      "instructionshost2": "2. Ative robôs clicando no sinal de mais nos slots de jogadores.",
+      "instructionshost3": "2. Aguarde outros jogadores entrarem e confirmarem que estão prontos.",
+      "instructionshost4": "3. Pressione \"Começar jogo\".",
+      "instructionshost4mobile": "3. Toque em \"Começar jogo\".",
+      "instructionsguest1": "1. Altere o seu nome se desejar.",
+      "instructionsguest2": "2. Clique em Pronto quando estiver pronto para começar.",
+      "instructionsguest2mobile": "2. Toque em Pronto quando estiver pronto para começar.",
+      "instructionsguest3": "3. Aguarde outros jogadores entrarem e confirmarem que estão prontos.",
+      "instructionsguest4": "4. Aguarde o anfitrião começar o jogo.",
+      "instructionslocal1": "1. Ative os jogadores clicando no sinal de mais nos slots de jogadores.",
+      "instructionslocal1mobile": "1. Ative os jogadores tocando no sinal de mais nos slots de jogadores.",
+      "instructionslocal2": "2. Ative robôs clicando novamente no mesmo slot de jogador.",
+      "instructionslocal2mobile": "2. Ative robôs tocando novamente no mesmo slot de jogador.",
+      "instructionslocal3": "3. Altere os nomes dos jogadores se desejar.",
+      "instructionslocal4": "4. Pressione \"Começar jogo\".",
+      "instructionslocal4mobile": "4. Toque em \"Começar jogo\".",
+      "password": "Senha:",
+      "name": "Nome:",
+      "feedback": "Escolha criar um novo jogo ou entrar em qualquer um dos jogos existentes na lista abaixo.",
+      "nogames": "Não há jogos existentes. Comece um novo jogo.",
+      "refresh": "Atualizar lista de jogos"
+    },
+    "multiplayerlobby": {
+      "title": "Selecione um jogo",
+      "connecting": "Carregando jogos...",
+      "begin": "Começar jogo",
+      "exit": "Sair do jogo",
+      "create": "Criar jogo",
+      "cashflow": "CASHFLOW",
+      "back": "Voltar",
+      "setup": "Configure o seu jogo",
+      "remote": "Remoto",
+      "human": "Humano",
+      "bot": "Robô",
+      "open": "Aberto"
+    },
+    "startTurnCard": {
+      "copy1": "Antes de começar o turno, revise o seu demonstrativo financeiro. Você também pode aproveitar para pagar passivos ou pegar dinheiro emprestado.",
+      "copy2": "Quando estiver pronto, role os dados e faça o seu turno.",
+      "copy3": "Quando estiver pronto, role 1, 2 ou 3 dados e faça o seu turno.",
+      "copy35": "Você pode rolar vários dados porque pagou pela caridade.",
+      "copy4": "Quando estiver pronto, role 1 ou 2 dados e faça o seu turno.",
+      "copy45": "Você pode rolar vários dados porque pagou pela caridade.",
+      "copy5": "DADOS",
+      "copy6": "ROLAR",
+      "copy7": "Antes de começar o turno, você pode revisar o seu demonstrativo financeiro."
+    },
+    "startGameCard": {
+      "title": " ESCOLHA O SEU SONHO",
+      "copy1": "Você é um ",
+      "copy2": "O seu salário inicial é R$ ",
+      "copy3": "Você tem R$ ",
+      "copy4": " de poupança",
+      "copy5": "Isso significa que o seu dinheiro inicial é R$ ",
+      "copy6": "Você é um ",
+      "logMessage": " está escolhendo o seu sonho.",
+      "button": "ESCOLHER"
+    },
+    "statementWidget": {
+      "dreambuy": "Para vencer, compre o seu sonho!",
+      "or": "-OU-",
+      "cashflowwin": "Para vencer, aumente a Renda do DIA DE FLUXO DE CAIXA!",
+      "goal": "Aumente a renda passiva para escapar da Corrida dos Ratos.",
+      "totalexpenses": "Total de despesas:",
+      "incomegoal": "Meta de renda: R$ ",
+      "cash": "Dinheiro: R$ ",
+      "cfincome": "Renda do DIA DE FLUXO DE CAIXA: R$ ",
+      "cfincomerecord": "Registro de Renda do DIA DE FLUXO DE CAIXA",
+      "totalincome": "Renda total:",
+      "cashnosign": "Dinheiro:",
+      "payday": "DIA DE PAGAMENTO: ",
+      "income": "Renda",
+      "expenses": "Despesas",
+      "borrow": "Pegar emprestado",
+      "repay": "Pagar"
+    },
+    "statementList": {
+      "cashflow": "Fluxo de caixa",
+      "salary": " Salário:",
+      "taxes": " Impostos:",
+      "homemortgage": "Hipoteca da casa:",
+      "homepayment": "Pagamento da hipoteca da casa:",
+      "schoolloan": "Empréstimos estudantis:",
+      "schoolpayment": "Pagamento do empréstimo estudantil:",
+      "car": "Empréstimos de carro:",
+      "carpayment": "Pagamento do empréstimo do carro:",
+      "credit": "Cartões de crédito:",
+      "creditpayment": "Pagamento de cartão de crédito:",
+      "retail": "Dívida de varejo:",
+      "retailpayment": "Pagamento de varejo:",
+      "boat": "Dívida do barco:",
+      "boatpayment": "Pagamento do barco:",
+      "loan": "Empréstimo:",
+      "loanpayment": "Pagamento do empréstimo:",
+      "otherexpenses": "Outras despesas:",
+      "childexpenses": "Despesas com filhos (",
+      "interests": "Juros/Dividendos",
+      "stocks": "Ações/Fundos/CDs",
+      "costshare": "Custo/Ação",
+      "shareof": " quota de ",
+      "sharesof": " quotas de ",
+      "realestate": "Imóveis/Negócios",
+      "cost": "Custo",
+      "liability": "Passivo",
+      "duplex": "DUPLEX",
+      "units": " unidades"
+    },
+    "splashWidget": {
+      "loading": "Carregando dados ..."
+    }
+  }
+}
