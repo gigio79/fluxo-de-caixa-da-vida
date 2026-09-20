@@ -7971,21 +7971,21 @@ var Main = (function () {
             Main.playSound("diceRoll")
 
             var config = {
-                apiKey: "AIzaSyDOqT0lKhsFIbNJAO1wI_n2j2wKEgjwoAs",
-                authDomain: "cashflow-a13fb.firebaseapp.com",
-                databaseURL: "https://cashflow-a13fb.firebaseio.com",
-                projectId: "cashflow-a13fb",
-                storageBucket: "cashflow-a13fb.appspot.com",
-                messagingSenderId: "1096267079473"
+                apiKey: "AIzaSyDixLQZnYcxSepspTFbgiTwcv-267Pv-sg",
+                authDomain: "fluxo-de-caixa-gigio.firebaseapp.com",
+                databaseURL: "https://fluxo-de-caixa-gigio-default-rtdb.firebaseio.com",
+                projectId: "fluxo-de-caixa-gigio",
+                storageBucket: "fluxo-de-caixa-gigio.firebasestorage.app",
+                messagingSenderId: "705358070317"
             };
 
             // var config = {
-            //     apiKey: "AIzaSyAc5X0zbUXJZ5pyWQY4_ii5jkd5iRfPHUg",
-            //     authDomain: "makemoneymove-dde1b.firebaseapp.com",
-            //     databaseURL: "https://makemoneymove-dde1b.firebaseio.com",
-            //     projectId: "makemoneymove-dde1b",
-            //     storageBucket: "makemoneymove-dde1b.appspot.com",
-            //     messagingSenderId: "653804666294"
+            //     apiKey: "AIzaSyDOqT0lKhsFIbNJAO1wI_n2j2wKEgjwoAs",
+            //     authDomain: "cashflow-a13fb.firebaseapp.com",
+            //     databaseURL: "https://cashflow-a13fb.firebaseio.com",
+            //     projectId: "cashflow-a13fb",
+            //     storageBucket: "cashflow-a13fb.appspot.com",
+            //     messagingSenderId: "1096267079473"
             // };
 
             document.getElementById("preloader").remove();

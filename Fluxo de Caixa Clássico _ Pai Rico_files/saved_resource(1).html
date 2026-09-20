@@ -28,9 +28,12 @@ START -- This section grabs Kentico user profile
     return results === null ? '' : decodeURIComponent(results[1].replace(/\+/g, ' '));
     };
 
-    var settings = {};
-    settings.userID = getUrlParameter('uid');
-    settings.gameHandle = getUrlParameter('gh');
+    var settings = settings || {};
+    var uid = getUrlParameter('uid');
+    var gh = getUrlParameter('gh');
+    if (uid) { settings.userID = uid; }
+    if (gh) { settings.gameHandle = gh; }
+    if (!settings.userID) { settings.userID = 'guest' + Math.floor(Math.random() * 1000000000); }
     console.log("INFORMATION " + settings.userID + " is " + settings.gameHandle);
   </script>
 
