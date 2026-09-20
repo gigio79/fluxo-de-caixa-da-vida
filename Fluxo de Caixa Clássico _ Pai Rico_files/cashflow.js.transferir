@@ -7994,6 +7994,17 @@ var Main = (function () {
             console.log("firebase.SDK_VERSION", firebase.SDK_VERSION);
             m_firebase = firebase;
 
+            // DIAG: monitor da conexao Realtime Database (mostra o momento exato da queda)
+            Main.dbConnected = null;
+            firebase.database().ref(".info/connected").on("value", function (snap) {
+                Main.dbConnected = snap.val();
+                if (snap.val() === true) {
+                    console.log("[DB] conectado ao Realtime Database:", config.databaseURL);
+                } else {
+                    console.error("[DB] DESCONECTADO do Realtime Database! O onDisconnect(isActive=false) sera aplicado e os jogadores poderao ser removidos para a tela inicial.");
+                }
+            });
+
             // Main.canvas.width = window.innerWidth;
             // Main.canvas.height = window.innerHeight;
             m_transform = m_stage.transform;
@@ -9384,12 +9395,14 @@ var GameSession = (function () {
         }
 
         this.joinRoom = function (roomId, password) {
+            console.log("[JOIN] joinRoom chamado. roomId=", roomId, "tem senha:", !!(password));
             // if fails to join... something.
             var roomRef = firebase.database().ref("/rooms/" + roomId);
             roomRef.once("value", function (snap) {
                 /** @type {RoomBlob} */
                 var o = snap.val();
                 if (!o) {
+                    console.error("[JOIN] sala nao encontrada (noroom):", roomId);
                     m_this.marco("onRoomJoinFailed", "noroom");
                     // m_this.release();
                     // Main.logic.exitGame();
@@ -9400,6 +9413,7 @@ var GameSession = (function () {
                 try {
                     roomBlob.fromFirebase(snap.val());
                 } catch (e) {
+                    console.error("[JOIN] dados da sala invalidos (badroomdata):", e);
                     m_this.marco("onRoomJoinFailed", "badroomdata");
                     // m_this.release();
                     // Main.logic.exitGame();
@@ -9476,10 +9490,7 @@ var GameSession = (function () {
                 }
 
                 if (index < 0) {
-                    // console.error("unable to find free spot. should probably spectate here...")
-                    // /** @type {PlayerBlob[]} */
-                    // var plist = roomBlob.players[i];
-                    // console.log("joinRoom failed", "full", settings.userID, plist.map(function (p) { return p.userId }));
+                    console.error("[JOIN] sala lotada (full) - sem vaga para", settings.userID);
                     m_this.marco("onRoomJoinFailed", "full");
                     // m_this.release();
                     // Main.logic.exitGame();
@@ -9502,13 +9513,11 @@ var GameSession = (function () {
                 // tempPlayerBlob.stocks.push(new Stocks(DeckBuilder.getCard(DeckNames.smalldealDeck, 20),20));
                 playerRef.set(tempPlayerBlob).then(function (/* thenableRef */ /* only works on pushes */) {
                     // m_this.setupRoomReferences(thenableRef.ref);
+                    console.log("[JOIN] blob do jogador escrito em players/" + index, "userId=", settings.userID);
                     m_this.setupRoomReferences(roomRef);
-
-                    // return thenableRef.child("timeCreated").once("value", function (timeCreatedSnap) {
-                    //     console.log("timestamp", roomBlob.timeCreated, timeCreatedSnap.val());
-                    //     roomBlob.timeCreated = timeCreatedSnap.val();
-                    //     return thenableRef;
-                    // });
+                }, function (err) {
+                    console.error("[JOIN] FALHA AO ESCREVER players/" + index + ":", err, "((Permission denied|Connection) = o Realtime Database recusou a escrita)");
+                    m_this.marco("onRoomJoinFailed", "writefailed");
                 })//.then(function (timeCreatedSnap) { });
 
             });
@@ -9563,7 +9572,10 @@ var GameSession = (function () {
                 m_this.localPlayerRef = roomRef.child("players/" + m_this.playerData.indexLobby);
 
                 // TODO: handle isActive player migration here
-                m_this.localPlayerRef.child("isActive").onDisconnect().set(false);
+                m_this.localPlayerRef.child("isActive").onDisconnect().set(false, function (err) {
+                    if (err) { console.error("[DB] onDisconnect(isActive=false) FALHOU:", err); }
+                    else { console.log("[DB] onDisconnect(isActive=false) registrado para", m_this.playerData.indexLobby); }
+                });
                 // m_this.localPlayerRef.child("isHost").onDisconnect().set(false, Main.changeHost);
                 // var index = m_this.playerData.index;
                 // m_this.localPlayerRef.onDisconnect().set(createPlayerBlobStub(index));
@@ -9572,7 +9584,7 @@ var GameSession = (function () {
                 m_this.localPlayerRef.on("value", function (snap) {
                     m_this.playerData.fromFirebaseBlob(snap.val());
                     if (m_this.playerData.isActive == false) {
-                        console.log("local player isActive lost");
+                        console.error("[KICK] jogador local perdeu isActive -> voltando para a tela inicial. dbConnected=", Main.dbConnected, "roomId=", m_this.roomId);
                         m_this.localPlayerRef.off("value");
                         Main.logic.exitGame();
                         return;
