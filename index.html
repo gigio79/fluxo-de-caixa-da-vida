@@ -14,6 +14,7 @@
 </head>
 <body>
 <script>
+  if (location.protocol.indexOf('http') === 0 && location.protocol !== 'https:' && location.hostname !== 'localhost') { location.replace(location.href.replace(/^http:/, 'https:')); }
   if ('serviceWorker' in navigator) {
     navigator.serviceWorker.register('./sw.js').then(function () {
       console.log('[SW] service worker raiz registrado');
