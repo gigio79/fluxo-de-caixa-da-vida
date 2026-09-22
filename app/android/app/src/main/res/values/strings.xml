@@ -1,0 +1,7 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+    <string name="app_name">Fluxo de Caixa</string>
+    <string name="title_activity_main">Fluxo de Caixa</string>
+    <string name="package_name">online.conectagente.fluxodecaixa</string>
+    <string name="custom_url_scheme">online.conectagente.fluxodecaixa</string>
+</resources>

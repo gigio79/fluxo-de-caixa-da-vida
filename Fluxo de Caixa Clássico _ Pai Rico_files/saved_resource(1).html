@@ -84,7 +84,7 @@ END -- This section grabs Kentico user profile
 </body>
 
 <script>
-  if ('serviceWorker' in navigator) {
+  if ('serviceWorker' in navigator && !(window.Capacitor && window.Capacitor.isNative)) {
     navigator.serviceWorker.register('./sw.js').then(function () {
       console.log('[SW] service worker registrado');
     }).catch(function (e) {

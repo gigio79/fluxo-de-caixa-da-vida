@@ -1,0 +1,13 @@
+{
+  "appId": "online.conectagente.fluxodecaixa",
+  "appName": "Fluxo de Caixa",
+  "webDir": "../Fluxo de Caixa Clássico _ Pai Rico_files",
+  "backgroundColor": "#303030",
+  "android": {
+    "backgroundColor": "#303030"
+  },
+  "assets": {
+    "iconBackgroundColor": "#1B2B55",
+    "splashBackgroundColor": "#1B2B55"
+  }
+}
