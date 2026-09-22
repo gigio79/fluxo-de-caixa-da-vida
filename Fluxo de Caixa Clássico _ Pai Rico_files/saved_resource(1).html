@@ -40,9 +40,13 @@ START -- This section grabs Kentico user profile
     var settings = settings || {};
     var uid = getUrlParameter('uid');
     var gh = getUrlParameter('gh');
+    if (!localStorage.getItem('cflow_dev_id')) {
+      localStorage.setItem('cflow_dev_id', 'dev' + Math.floor(Math.random() * 1000000000000000));
+    }
     if (uid) { settings.userID = uid; }
+    else { settings.userID = localStorage.getItem('cflow_dev_id'); }
     if (gh) { settings.gameHandle = gh; }
-    if (!settings.userID) { settings.userID = 'guest' + Math.floor(Math.random() * 1000000000); }
+    else { settings.gameHandle = localStorage.getItem('cflow_name') || 'Visitante'; }
     console.log("INFORMATION " + settings.userID + " is " + settings.gameHandle);
   </script>
 
@@ -124,6 +128,116 @@ END -- This section grabs Kentico user profile
 
 </body>
 
+<div id="cflow-player-chip" title="Tocar para definir seu nome"></div>
+<div id="cflow-player-modal" hidden>
+  <div id="cflow-player-box">
+    <div id="cflow-player-title">Seu nome no jogo</div>
+    <div id="cflow-player-sub">Fica salvo neste aparelho. Se já estiver numa sala, saia e entre de novo para o novo nome valer.</div>
+    <input id="cflow-player-input" type="text" maxlength="20" autocomplete="off" placeholder="Ex.: Maria">
+    <div id="cflow-player-actions">
+      <button id="cflow-player-ok">Salvar</button>
+      <button id="cflow-player-cancel">Fechar</button>
+    </div>
+  </div>
+</div>
+<style>
+  #cflow-player-chip {
+    position: fixed;
+    left: 8px;
+    bottom: 8px;
+    z-index: 2147483000;
+    background: rgba(42, 23, 10, 0.82);
+    color: #f3e3c4;
+    border: 1px solid rgba(243, 227, 196, 0.35);
+    border-radius: 14px;
+    padding: 6px 12px;
+    font: 600 13px/1.2 system-ui, sans-serif;
+    cursor: pointer;
+    -webkit-user-select: none;
+    user-select: none;
+    white-space: nowrap;
+    max-width: 40vw;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+  #cflow-player-modal {
+    position: fixed;
+    left: 0; top: 0; right: 0; bottom: 0;
+    z-index: 2147483100;
+    background: rgba(0, 0, 0, 0.55);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  #cflow-player-box {
+    width: min(320px, 86vw);
+    background: #2b1a0c;
+    border: 1px solid #8c5b2e;
+    border-radius: 12px;
+    padding: 16px;
+    box-sizing: border-box;
+    font-family: system-ui, sans-serif;
+    color: #f3e3c4;
+  }
+  #cflow-player-title { font-size: 17px; font-weight: 700; margin-bottom: 6px; }
+  #cflow-player-sub { font-size: 12px; opacity: 0.85; margin-bottom: 12px; line-height: 1.4; }
+  #cflow-player-input {
+    width: 100%;
+    box-sizing: border-box;
+    font-size: 16px;
+    padding: 9px 10px;
+    border-radius: 8px;
+    border: 1px solid #8c5b2e;
+    background: #1c1107;
+    color: #f3e3c4;
+  }
+  #cflow-player-actions { display: flex; gap: 8px; margin-top: 12px; }
+  #cflow-player-actions button {
+    flex: 1;
+    font-size: 15px;
+    font-weight: 700;
+    padding: 9px 0;
+    border-radius: 8px;
+    border: none;
+    cursor: pointer;
+    color: #2b1a0c;
+    background: #d9a45b;
+  }
+  #cflow-player-actions button:hover { background: #e8b36c; }
+  #cflow-player-cancel { background: #6e4a26 !important; color: #f3e3c4 !important; }
+</style>
+<script>
+  (function () {
+    var chip = document.getElementById('cflow-player-chip');
+    var modal = document.getElementById('cflow-player-modal');
+    var input = document.getElementById('cflow-player-input');
+    var sayGuest = 'Jogador ?  (toque p/ nome)';
+    function label() {
+      var nm = (window.settings && settings.gameHandle) || localStorage.getItem('cflow_name') || 'Visitante';
+      chip.textContent = 'Jogador: ' + nm;
+    }
+    function open() {
+      input.value = (window.settings && settings.gameHandle) || localStorage.getItem('cflow_name') || '';
+      modal.hidden = false;
+      input.focus();
+    }
+    function close() { modal.hidden = true; }
+    function save() {
+      var nm = input.value.trim();
+      if (!nm) { nm = 'Visitante'; }
+      localStorage.setItem('cflow_name', nm);
+      if (window.settings) { settings.gameHandle = nm; }
+      label();
+      close();
+    }
+    chip.addEventListener('click', open);
+    document.getElementById('cflow-player-ok').addEventListener('click', save);
+    document.getElementById('cflow-player-cancel').addEventListener('click', close);
+    input.addEventListener('keydown', function (e) { if (e.key === 'Enter') { save(); } });
+    modal.addEventListener('click', function (e) { if (e.target === modal) { close(); } });
+    label();
+  })();
+</script>
 <script>
   if ('serviceWorker' in navigator && !(window.Capacitor && window.Capacitor.isNative)) {
     navigator.serviceWorker.register('./sw.js').then(function () {
