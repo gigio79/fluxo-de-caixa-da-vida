@@ -1,0 +1,32 @@
+{
+  "name": "Fluxo de Caixa",
+  "short_name": "Fluxo de Caixa",
+  "description": "Jogo de tabuleiro Fluxo de Caixa — saia da corrida dos ratos e entre na pista rápida.",
+  "lang": "pt-BR",
+  "start_url": "./saved_resource(1).html",
+  "scope": "./",
+  "display": "fullscreen",
+  "orientation": "landscape",
+  "background_color": "#FAFAFA",
+  "theme_color": "#303030",
+  "icons": [
+    {
+      "src": "./icons/icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "./icons/icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "./icons/icon-maskable-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "maskable"
+    }
+  ]
+}

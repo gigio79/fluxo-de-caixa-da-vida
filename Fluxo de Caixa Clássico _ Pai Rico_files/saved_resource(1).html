@@ -1,6 +1,14 @@
 <!DOCTYPE html>
 
 <html><head id="head"><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, viewport-fit=cover">
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="apple-mobile-web-app-title" content="Fluxo de Caixa">
+  <meta name="theme-color" content="#303030">
+  <link rel="manifest" href="./manifest.webmanifest">
+  <link rel="apple-touch-icon" href="./icons/icon-180.png">
   <title>
     Register and Play CASHFLOW® Classic Here.
   </title>
@@ -73,4 +81,15 @@ END -- This section grabs Kentico user profile
 
 
 
-</body></html>
+</body>
+
+<script>
+  if ('serviceWorker' in navigator) {
+    navigator.serviceWorker.register('./sw.js').then(function () {
+      console.log('[SW] service worker registrado');
+    }).catch(function (e) {
+      console.error('[SW] falha ao registrar:', e);
+    });
+  }
+</script>
+</html>
