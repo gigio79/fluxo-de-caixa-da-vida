@@ -18,10 +18,11 @@ jobs:
           java-version: '17'
           cache: gradle
 
-      - name: Configurar Android SDK
-        uses: android-actions/setup-android@v3
-        with:
-          packages: 'platform-tools, platforms;android-35, build-tools;35.0.0'
+      - name: Configurar Android SDK (preinstalado + platform 35)
+        run: |
+          sdkmanager --version
+          yes | sdkmanager --licenses >/dev/null 2>&1 || true
+          sdkmanager "platforms;android-35" "build-tools;35.0.0" >/dev/null 2>&1 || true
 
       - name: Instalar dependencias npm
         working-directory: app
