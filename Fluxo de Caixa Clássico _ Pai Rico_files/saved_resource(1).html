@@ -78,6 +78,44 @@ END -- This section grabs Kentico user profile
 
   </div>
 
+<style>
+  .top-banner-ads, .btm-banner-ads { display: none !important; }
+
+  html, body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    overflow: hidden;
+    background: #14141a;
+  }
+
+  .game-container {
+    position: absolute;
+    left: 0;
+    top: 0;
+    transform-origin: 0 0;
+  }
+</style>
+<script>
+  (function () {
+    function fitScreen() {
+      var container = document.querySelector('.game-container');
+      if (!container) return;
+      var W = 1024, H = 768;
+      var availW = window.innerWidth, availH = window.innerHeight;
+      var k = Math.min(availW / W, availH / H);
+      if (k > 1) k = 1;
+      container.style.transform = 'scale(' + k + ')';
+      container.style.left = Math.round((availW - W * k) / 2) + 'px';
+      container.style.top = Math.round((availH - H * k) / 2) + 'px';
+    }
+    window.addEventListener('resize', fitScreen);
+    window.addEventListener('orientationchange', fitScreen);
+    window.addEventListener('load', fitScreen);
+    fitScreen();
+  })();
+</script>
+
 
 
 
