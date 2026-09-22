@@ -2,13 +2,26 @@
 <html lang="pt-BR">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, viewport-fit=cover">
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="apple-mobile-web-app-title" content="Fluxo de Caixa">
+  <meta name="theme-color" content="#303030">
+  <link rel="manifest" href="./Fluxo de Caixa Clássico _ Pai Rico_files/manifest.webmanifest">
+  <link rel="apple-touch-icon" href="./Fluxo de Caixa Clássico _ Pai Rico_files/icons/icon-180.png">
   <title>Fluxo de Caixa</title>
-  <script>
-    location.replace('./Fluxo%20de%20Caixa%20Cl%C3%A1ssico%20_%20Pai%20Rico_files/saved_resource(1).html?gh=Visitante');
-  </script>
 </head>
 <body>
-  <p>Carregando o jogo… <a href="./Fluxo%20de%20Caixa%20Cl%C3%A1ssico%20_%20Pai%20Rico_files/saved_resource(1).html?gh=Visitante">clique aqui</a> se nada acontecer.</p>
+<script>
+  if ('serviceWorker' in navigator) {
+    navigator.serviceWorker.register('./sw.js').then(function () {
+      console.log('[SW] service worker raiz registrado');
+    }).catch(function (e) {
+      console.error('[SW] falha ao registrar:', e);
+    });
+  }
+  location.replace('./Fluxo de Caixa Clássico _ Pai Rico_files/saved_resource(1).html?gh=Visitante');
+</script>
 </body>
 </html>
