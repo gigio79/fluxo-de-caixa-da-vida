@@ -18,20 +18,18 @@ jobs:
           java-version: '17'
           cache: gradle
 
-      - name: Configurar Android SDK (preinstalado + garantir platform 35)
+      - name: Instalar Android SDK (cmdline-tools + platform 35)
         run: |
-          echo "ANDROID_HOME=$ANDROID_HOME"
-          SDK=""
-          for c in "$ANDROID_HOME/cmdline-tools/latest/bin/sdkmanager" "$ANDROID_HOME/cmdline-tools/bin/sdkmanager" /usr/local/lib/android/sdk/cmdline-tools/latest/bin/sdkmanager /opt/android/sdkmanager; do
-            if [ -x "$c" ]; then SDK="$c"; break; fi
-          done
-          if command -v sdkmanager >/dev/null 2>&1; then SDK="$(command -v sdkmanager)"; fi
-          echo "sdkmanager: ${SDK:-nao encontrado}"
-          if [ -n "$SDK" ]; then
-            yes | "$SDK" --licenses >/dev/null 2>&1 || true
-            "$SDK" "platforms;android-35" "build-tools;35.0.0" >/dev/null 2>&1 || true
-          fi
-          echo "SDK configurado (AGP instala o que faltar)"
+          export ANDROID_HOME="$HOME/android-sdk"
+          mkdir -p "$ANDROID_HOME/cmdline-tools"
+          curl -sS -o /tmp/clt.zip https://dl.google.com/android/repository/commandlinetools-linux-11076708_latest.zip
+          unzip -q /tmp/clt.zip -d "$ANDROID_HOME/cmdline-tools"
+          mv "$ANDROID_HOME/cmdline-tools/cmdline-tools" "$ANDROID_HOME/cmdline-tools/latest"
+          yes | "$ANDROID_HOME/cmdline-tools/latest/bin/sdkmanager" --licenses >/dev/null 2>&1 || true
+          "$ANDROID_HOME/cmdline-tools/latest/bin/sdkmanager" "platform-tools" "platforms;android-35" "build-tools;35.0.0" >/dev/null 2>&1 || true
+          echo "ANDROID_HOME=$ANDROID_HOME" >> "$GITHUB_ENV"
+          echo "ANDROID_SDK_ROOT=$ANDROID_HOME" >> "$GITHUB_ENV"
+          echo "SDK instalado em $ANDROID_HOME"
 
       - name: Instalar dependencias npm
         working-directory: app
@@ -42,8 +40,16 @@ jobs:
         run: npx cap sync android
 
       - name: Compilar APK (debug)
+        id: build
         working-directory: app/android
-        run: ./gradlew assembleDebug --no-daemon
+        run: ./gradlew assembleDebug --no-daemon --stacktrace 2>&1 | tee ../build.log; exit ${PIPESTATUS[0]}
+
+      - name: Publicar log de erro (se falhou)
+        if: failure()
+        uses: actions/upload-artifact@v4
+        with:
+          name: build-log
+          path: app/build.log
 
       - name: Enviar APK
         uses: actions/upload-artifact@v4
