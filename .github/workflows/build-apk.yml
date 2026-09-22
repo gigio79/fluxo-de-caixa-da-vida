@@ -18,11 +18,20 @@ jobs:
           java-version: '17'
           cache: gradle
 
-      - name: Configurar Android SDK (preinstalado + platform 35)
+      - name: Configurar Android SDK (preinstalado + garantir platform 35)
         run: |
-          sdkmanager --version
-          yes | sdkmanager --licenses >/dev/null 2>&1 || true
-          sdkmanager "platforms;android-35" "build-tools;35.0.0" >/dev/null 2>&1 || true
+          echo "ANDROID_HOME=$ANDROID_HOME"
+          SDK=""
+          for c in "$ANDROID_HOME/cmdline-tools/latest/bin/sdkmanager" "$ANDROID_HOME/cmdline-tools/bin/sdkmanager" /usr/local/lib/android/sdk/cmdline-tools/latest/bin/sdkmanager /opt/android/sdkmanager; do
+            if [ -x "$c" ]; then SDK="$c"; break; fi
+          done
+          if command -v sdkmanager >/dev/null 2>&1; then SDK="$(command -v sdkmanager)"; fi
+          echo "sdkmanager: ${SDK:-nao encontrado}"
+          if [ -n "$SDK" ]; then
+            yes | "$SDK" --licenses >/dev/null 2>&1 || true
+            "$SDK" "platforms;android-35" "build-tools;35.0.0" >/dev/null 2>&1 || true
+          fi
+          echo "SDK configurado (AGP instala o que faltar)"
 
       - name: Instalar dependencias npm
         working-directory: app
