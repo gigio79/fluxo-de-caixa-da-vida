@@ -22,7 +22,9 @@
       console.error('[SW] falha ao registrar:', e);
     });
   }
-  location.replace('./Fluxo de Caixa Clássico _ Pai Rico_files/saved_resource(1).html?gh=Visitante');
+  // Sem "?gh=" para preservar o nome ja salvo no aparelho (usa cflow_name).
+  // Sem nome salvo, o jogo assume "Visitante" automaticamente.
+  location.replace('./Fluxo de Caixa Clássico _ Pai Rico_files/saved_resource(1).html');
 </script>
 </body>
 </html>
