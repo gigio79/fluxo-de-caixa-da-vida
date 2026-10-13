@@ -140,6 +140,7 @@ END -- This section grabs Kentico user profile
     </div>
   </div>
 </div>
+<div id="cflow-update-btn" title="Baixar a versão mais recente do jogo">&#8635; Atualizar</div>
 <style>
   #cflow-player-chip {
     position: fixed;
@@ -206,6 +207,23 @@ END -- This section grabs Kentico user profile
   }
   #cflow-player-actions button:hover { background: #e8b36c; }
   #cflow-player-cancel { background: #6e4a26 !important; color: #f3e3c4 !important; }
+  #cflow-update-btn {
+    position: fixed;
+    right: 8px;
+    bottom: 8px;
+    z-index: 2147483000;
+    background: rgba(42, 23, 10, 0.82);
+    color: #f3e3c4;
+    border: 1px solid rgba(243, 227, 196, 0.35);
+    border-radius: 14px;
+    padding: 6px 12px;
+    font: 600 13px/1.2 system-ui, sans-serif;
+    cursor: pointer;
+    -webkit-user-select: none;
+    user-select: none;
+    white-space: nowrap;
+  }
+  #cflow-update-btn[data-busy] { opacity: 0.7; cursor: default; }
 </style>
 <script>
   (function () {
@@ -240,12 +258,52 @@ END -- This section grabs Kentico user profile
   })();
 </script>
 <script>
-  if ('serviceWorker' in navigator && !(window.Capacitor && window.Capacitor.isNative)) {
+  if ('serviceWorker' in navigator) {
     navigator.serviceWorker.register('./sw.js').then(function () {
       console.log('[SW] service worker registrado');
     }).catch(function (e) {
       console.error('[SW] falha ao registrar:', e);
     });
   }
+</script>
+<script>
+  // Botao "Atualizar": forca o download da versao mais recente do jogo.
+  // Limpa service workers + caches e recarrega o endereco com um "?_u=" novo,
+  // o que forca o navegador/WebView a buscar tudo de novo em vez de usar o cache.
+  (function () {
+    var btn = document.getElementById('cflow-update-btn');
+    if (!btn) { return; }
+    function reloadFresh() {
+      var base = location.href.split('#')[0].split('?')[0];
+      location.replace(base + '?_u=' + Date.now());
+    }
+    btn.addEventListener('click', function () {
+      if (btn.getAttribute('data-busy')) { return; }
+      btn.setAttribute('data-busy', '1');
+      btn.textContent = 'Atualizando...';
+      var jobs = [];
+      try {
+        if ('serviceWorker' in navigator && navigator.serviceWorker.getRegistrations) {
+          jobs.push(navigator.serviceWorker.getRegistrations().then(function (regs) {
+            return Promise.all(regs.map(function (r) { return r.unregister(); }));
+          }).catch(function () {}));
+        }
+      } catch (e) {}
+      try {
+        if (window.caches && caches.keys) {
+          jobs.push(caches.keys().then(function (keys) {
+            return Promise.all(keys.map(function (k) { return caches.delete(k); }));
+          }).catch(function () {}));
+        }
+      } catch (e) {}
+      var go = function () { reloadFresh(); };
+      if (jobs.length) {
+        Promise.all(jobs).then(go).catch(go);
+        setTimeout(go, 1500); // nao trava esperando, recarrega de qualquer jeito
+      } else {
+        go();
+      }
+    });
+  })();
 </script>
 </html>

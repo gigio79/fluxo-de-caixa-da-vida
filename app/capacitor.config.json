@@ -3,6 +3,11 @@
   "appName": "Fluxo de Caixa",
   "webDir": "../Fluxo de Caixa Clássico _ Pai Rico_files",
   "backgroundColor": "#303030",
+  "server": {
+    "url": "https://jogo.conectagente.online/Fluxo%20de%20Caixa%20Cl%C3%A1ssico%20_%20Pai%20Rico_files/saved_resource%281%29.html",
+    "androidScheme": "https",
+    "cleartext": false
+  },
   "android": {
     "backgroundColor": "#303030"
   },

@@ -1,4 +1,4 @@
-var CACHE = 'fluxo-de-caixa-v3';
+var CACHE = 'fluxo-de-caixa-v4';
 var ASSETS = [
   "./2108039232768421",
   "./24px.svg",
@@ -155,16 +155,17 @@ self.addEventListener('fetch', function (event) {
   var url = new URL(req.url);
   if (url.origin !== self.location.origin) return;
 
+  // REDE PRIMEIRO: online sempre pega a versao mais recente; o cache e so reserva.
   event.respondWith(
-    caches.match(req).then(function (hit) {
-      if (hit) return hit;
-      return fetch(req).then(function (res) {
-        if (res && res.status === 200 && (res.type === 'basic' || res.type === 'default')) {
-          var copy = res.clone();
-          caches.open(CACHE).then(function (cache) { cache.put(req, copy); });
-        }
-        return res;
-      }).catch(function () {
+    fetch(req).then(function (res) {
+      if (res && res.status === 200 && (res.type === 'basic' || res.type === 'default')) {
+        var copy = res.clone();
+        caches.open(CACHE).then(function (cache) { cache.put(req, copy); });
+      }
+      return res;
+    }).catch(function () {
+      return caches.match(req).then(function (hit) {
+        if (hit) return hit;
         return caches.match('./saved_resource(1).html');
       });
     })
