@@ -184,7 +184,7 @@ button.empty {
 	height: 177px;
 	overflow: auto;
 	font-family: "Helvetica", sans-serif;
-	font-size: 11px;
+	font-size: 15px;
 	vertical-align: middle;
 	line-height: 22px;
 	user-select: none;
@@ -224,8 +224,8 @@ button.empty {
 }
 
 .right {
-	flex: 0 0 76px;
-	width: 76px;
+	flex: 0 0 96px;
+	width: 96px;
 	text-align: center;
 }
 
@@ -332,6 +332,8 @@ input[type="number"]::-webkit-outer-spin-button {
 
 .chatlog-entry {
 	display: block;
+	font-size: 15px;
+	line-height: 1.35;
 }
 
 #PasswordTextBox{

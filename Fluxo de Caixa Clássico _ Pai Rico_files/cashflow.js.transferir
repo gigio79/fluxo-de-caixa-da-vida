@@ -2,6 +2,15 @@
  * @constructor
  */
 
+/**
+ * Escala global de legibilidade das fontes do jogo (mobile).
+ * O tabuleiro e desenhado em 1024x768 e reduzido para caber na tela do celular
+ * (~50% em paisagem), deixando os textos muito pequenos.
+ * Aumente/diminua este valor para deixar TODO o texto do jogo maior/menor.
+ * Elementos de botao (largura fixa) ficam de fora para nao estourar a caixa.
+ */
+var CFLOW_TEXT_SCALE = 1.4;
+
 var EventDispatcher = (function () {
 
     var m_polos = {};
@@ -1911,7 +1920,7 @@ var PlayerGamePieceElement = (function () {
 				// console.log("Is it my turn? ", Main.gameSession.isMyTurn);
 				var text = new createjs.Text(
 					"R$ " + paydayAmount.toString(),
-					"20px Arial",
+					Math.round(20 * (window.CFLOW_TEXT_SCALE || 1)) + "px Arial",
 					Colors.WHITE
 				);
 				text.x = this.transform.x;
@@ -9984,10 +9993,24 @@ var GameSession = (function () {
                     if (tempCash < 0) {
                         tempCash = 0;
                     }
-                    m_this.localPlayerRef.update({
+
+                    // Amortiza os passivos: cada Dia de Pagamento abate o saldo das dividas
+                    // pelo valor da mensalidade da rodada.
+                    var paydayUpdater = {
                         cash: tempCash,
                         position: newPosition
-                    }).then(function () {
+                    };
+                    if (numPaydays > 0) {
+                        if (m_this.playerData.amortizeDebts(numPaydays)) {
+                            m_this.playerData.refresh();
+                            paydayUpdater.debts = m_this.playerData.debts;
+                            paydayUpdater.passiveIncome = m_this.playerData.passiveIncome;
+                            paydayUpdater.totalExpenses = m_this.playerData.totalExpenses;
+                            paydayUpdater.cashflowRatio = m_this.playerData.cashflowRatio;
+                        }
+                    }
+
+                    m_this.localPlayerRef.update(paydayUpdater).then(function () {
                         if (numPaydays > 0) {
                             m_this.marco("onShowPayday", (payday * numPaydays))
                         }
@@ -10853,16 +10876,11 @@ var GameSession = (function () {
         }
 
         function onBankruptHalveClicked() {
-            //do not do the bankrupt check here because we dont want to halve again we just want to check if they still are if so they lose
-            if ((m_this.playerData.salary + m_this.playerData.passiveIncome - m_this.playerData.totalExpenses) > 0) {
-                //this check determines if they are ready to get out of bankruptcy
-                setPlayerTurnState(BankruptCompleteCard);
-            }
-            else {
-                m_this.localPlayerRef.child("bankruptCount").set(-1).then(function () {
-                    setPlayerTurnState(BankruptLoseCard);
-                });
-            }
+            // REGRA DO TABULEIRO: ninguem e eliminado.
+            // Antes, se a renda ainda fosse negativa apos a reducao das dividas, o jogador
+            // recebia bankruptCount = -1 ("gameover") e a mesa travava.
+            // Agora ele sempre conclui a recuperacao e continua jogando.
+            setPlayerTurnState(BankruptCompleteCard);
         }
 
         function onBankruptLoseClicked() {
@@ -11294,12 +11312,33 @@ var GameSession = (function () {
                 /** @type {PlayerBlob[]} */
                 var players = snap.val();
 
-                //TODO: test that player skipping works
-                while (nextPlayerIndex != myIndex) {
-                    if (shouldSkipNextPlayer(players[nextPlayerIndex])) {
+                // Mapeia os blobs pela ordem real dos jogadores (playerOrder), evitando
+                // acessar chaves inexistentes do snapshot (que lancavam excecao e travavam a mesa).
+                var playerOrder = m_this.roomBlob.playerOrder || [];
+                function blobAt(i) { return players[playerOrder[i]]; }
+
+                // Pula jogadores inativos/eliminados. Nunca devolve o turno para o proprio
+                // jogador atual a menos que nao exista mais ninguem ativo.
+                var guard = 0;
+                while (nextPlayerIndex != myIndex && guard < numPlayers) {
+                    var nextBlob = blobAt(nextPlayerIndex);
+                    if (!nextBlob || shouldSkipNextPlayer(nextBlob)) {
                         nextPlayerIndex = (nextPlayerIndex + 1) % numPlayers;
+                        guard++;
                     } else {
                         break;
+                    }
+                }
+
+                // Se o laco voltou para o proprio jogador e ele nao esta ativo,
+                // procura qualquer jogador ativo para nao travar a partida.
+                if (nextPlayerIndex == myIndex && shouldSkipNextPlayer(blobAt(myIndex) || {})) {
+                    for (var p = 0; p < numPlayers; p++) {
+                        var candidate = blobAt(p);
+                        if (candidate && !shouldSkipNextPlayer(candidate)) {
+                            nextPlayerIndex = p;
+                            break;
+                        }
                     }
                 }
 
@@ -12361,6 +12400,29 @@ var PlayerData = (function () {
         }
 
         /**
+         * Amortiza os passivos.
+         * A cada Dia de Pagamento (rodada) o saldo da divida (liability) e reduzido
+         * pelo valor da mensalidade (expense). Dividas quitadas saem da lista
+         * (e a mensalidade deixa de contar nas despesas).
+         * @param {Number} [rounds] - quantos Dias de Pagamento foram recebidos (default 1)
+         * @returns {Boolean} true se algum passivo mudou
+         */
+        this.amortizeDebts = function (rounds) {
+            rounds = rounds || 1;
+            var changed = false;
+            m_playerBlob.debts = this.debts.filter(function (debt) {
+                if (!debt || !debt.liability || debt.liability <= 0) { return true; } // sem saldo (ex.: impostos/outros): mantem
+                var payment = Number(debt.expense) || 0;
+                if (payment <= 0) { return true; }
+                var newLiability = Math.max(0, debt.liability - (payment * rounds));
+                debt.liability = newLiability;
+                changed = true;
+                return newLiability > 0; // quitou a divida: remove (e a mensalidade)
+            });
+            return changed;
+        }
+
+        /**
          * removes the property with the given index
          * @param {String} propIndex
          */
@@ -12466,10 +12528,21 @@ var TemplateParser = (function () {
     function format(id, subID, color, allCaps) {
         var subtemplate = parse(id)[subID];
 
+        // Botoes com largura fixa: mantem o tamanho original para o texto nao estourar a caixa.
+        // O widget da ficha (statementSheetTemplate) tem layout fixo e apertado: nao escala.
+        var TEXT_SCALE_SKIP = {
+            buyText: true, passText: true, sellText: true,
+            repayText: true, borrowText: true,
+            repayButtonText: true, loanButtonText: true
+        };
+        var textScale = (
+            id === "statementSheetTemplate" || TEXT_SCALE_SKIP[subID]
+        ) ? 1 : (window.CFLOW_TEXT_SCALE || 1);
+
         // console.log("colortest", color, subtemplate.color);
         var text = new createjs.Text(
             allCaps ? subtemplate.text.toUpperCase() : subtemplate.text,
-            font(subtemplate.bold ? "bold" : "", subtemplate.size, subtemplate.font),
+            font(subtemplate.bold ? "bold" : "", subtemplate.size, subtemplate.font, textScale),
             color || subtemplate.color
         );
 
@@ -12493,9 +12566,11 @@ var TemplateParser = (function () {
         return text;
     }
 
-    function font(fontWeight, size, font) {
+    function font(fontWeight, size, font, scale) {
         var SPACE = " ";
-        return (fontWeight + SPACE + size + "px" + SPACE + font)
+        if (scale === undefined || scale === null) { scale = (window.CFLOW_TEXT_SCALE || 1); }
+        var scaledSize = Math.round(Number(size) * scale);
+        return (fontWeight + SPACE + scaledSize + "px" + SPACE + font)
     }
 
     function rect(id, subID, color) {
