@@ -12556,7 +12556,12 @@ var TemplateParser = (function () {
             'dreamSelectorScreen.chooseDreamText': 1.12,
             'dreamSelectorScreen.selectDreamListTitle': 1.15,
             'gameScreen.chatTitleText': 1.15,
-            'gameScreen.historyTextField': 1.15
+            'gameScreen.historyTextField': 1.15,
+            'partySetupScreen.instructionsText': 1.0,
+            'partySetupScreen.gameNameText_onlinePartySetup': 1.0,
+            'partySetupScreen.passwordNameText_onlinePartySetup': 1.0,
+            'partySetupScreen.gameNameInputText_onlinePartySetup': 1.0,
+            'partySetupScreen.passwordInputText_onlinePartySetup': 1.0
         };
         var keyElem = id + '.' + subID;
         if (ELEM_CAP[keyElem] !== undefined && textScale > ELEM_CAP[keyElem]) {
@@ -13466,44 +13471,50 @@ var RoomScreen = (function () {
 
             var subtemplate = null;
 
-            subtemplate = template.gameOutline;
+            subtemplate = template.gameNameInputText_onlinePartySetup;
             nameTextbox = this.create(DOMElement);
             nameTextbox.set(document.createElement("input"), 
             /** @param {HTMLInputElement} element */
             function (element) {
                 element.maxLength = 8
-                element.autocomplete = "new-password";
+                element.autocomplete = "off";
                 element.style.width = subtemplate.width.toString() + px;
                 element.style.height = subtemplate.height.toString() + px;
-                subtemplate = template.gameNameText_onlinePartySetup;
                 element.style.fontFamily = subtemplate.font;
                 element.style.fontSize = subtemplate.size.toString() + px;
                 element.style.verticalAlign = "top";
                 element.style.background = "none";
+                element.style.boxSizing = "border-box";
+                element.style.padding = "0";
+                element.style.margin = "0";
+                element.style.border = "none";
+                element.style.outline = "none";
                 element.addEventListener("input", function (event) {
                     nextButton.alpha = nextText.alpha = nextArrow.alpha = element.value != "" ? 1 : DISABLED_ALPHA;
                 });
             });
-            subtemplate = template.gameOutline;
             nameTextbox.transform.x = subtemplate.x;
             nameTextbox.transform.y = subtemplate.y;
 
             
-            subtemplate = template.passwordOutline;
+            subtemplate = template.passwordInputText_onlinePartySetup;
             passwordTextbox = this.create(DOMElement);
             passwordTextbox.set(document.createElement("input"), function (element) {
                 element.maxLength = 4;
                 element.style.width = subtemplate.width.toString() + px;
                 element.style.height = subtemplate.height.toString() + px;
                 element.autocomplete = "new-password";
-                subtemplate = template.passwordInputText_onlinePartySetup;
                 element.style.fontFamily = subtemplate.font;
                 element.style.fontSize = subtemplate.size.toString() + px;
                 element.style.verticalAlign = "top";
                 element.style.background = "none";
+                element.style.boxSizing = "border-box";
+                element.style.padding = "0";
+                element.style.margin = "0";
+                element.style.border = "none";
+                element.style.outline = "none";
                 // element.type = "password";
             });
-            subtemplate = template.passwordOutline;
             passwordTextbox.transform.x = subtemplate.x;
             passwordTextbox.transform.y = subtemplate.y;
         }
