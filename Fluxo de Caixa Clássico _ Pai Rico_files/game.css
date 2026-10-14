@@ -134,6 +134,17 @@ button.empty {
 #Lobby {
 	position: relative;
 	overflow-x: hidden;
+	display: flex;
+	flex-direction: column;
+	gap: 6px;
+}
+
+#Lobby .lobby-header {
+	margin: 0;
+	padding: 4px 8px;
+	font-size: 15px;
+	text-align: center;
+	user-select: none;
 }
 
 #rooms {
@@ -148,6 +159,8 @@ button.empty {
 
 #Lobby li {
 	margin: 0 0 0 0;
+	word-break: break-word;
+	overflow-wrap: anywhere;
 }
 
 #Lobby li.odd {
@@ -170,8 +183,10 @@ button.empty {
 #Lobby a {
 	font-family: Helvetica, sans-serif;	
 	display: block;
-	width: 37em;
 	padding: 0.4em 0.8em;
+	max-width: 37em;
+	word-break: break-word;
+	overflow-wrap: anywhere;
 }
 
 .button {
@@ -181,20 +196,22 @@ button.empty {
 
 .list {
 	width: 306px;
-	height: 177px;
+	min-height: 177px;
+	max-height: 177px;
 	overflow: auto;
 	font-family: "Helvetica", sans-serif;
 	font-size: 15px;
 	vertical-align: middle;
-	line-height: 22px;
+	line-height: 1.35;
 	user-select: none;
 }
 
 .item {
-	height: 23px;
+	min-height: 23px;
 	visibility: inherit;
 	display: flex;
 	align-items: center;
+	gap: 4px;
 }
 
 .top-header {
@@ -218,9 +235,11 @@ button.empty {
 }
 
 .column {
-	white-space: nowrap;
-	overflow: hidden;
-	height: 22px;
+	white-space: normal;
+	overflow-wrap: anywhere;
+	word-break: break-word;
+	min-height: 22px;
+	padding: 2px 0;
 }
 
 .right {
@@ -250,13 +269,16 @@ button.empty {
 
 .list.fastTrack {
 	width: 606px;
-	height: 350.5px;
+	min-height: 350.5px;
+	max-height: 350.5px;
+	overflow-y: auto;
 }
 
 .column.fastTrack {
-	white-space: nowrap;
-	overflow: hidden;
-	height: 22px;
+	white-space: normal;
+	overflow-wrap: anywhere;
+	word-break: break-word;
+	min-height: 22px;
 }
 
 .right.fastTrack {
@@ -338,7 +360,8 @@ input[type="number"]::-webkit-outer-spin-button {
 
 #PasswordTextBox{
 	background:none;
-	width: 120px;
+	max-width: 120px;
+	width: 100%;
 	height: 20px;
 	font-size: 18px;
 }
@@ -352,9 +375,11 @@ input {
 }
 
 #textLog{
-	overflow-y: scroll;
+	overflow-y: auto;
 	word-wrap: break-word;
 	width: 300px;
+	min-height: 55px;
+	max-height: 231px;
 }
 
 #inputChat{

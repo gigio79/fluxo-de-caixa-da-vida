@@ -1918,9 +1918,11 @@ var PlayerGamePieceElement = (function () {
 				m_number === Main.gameSession.playerData.index
 			) {
 				// console.log("Is it my turn? ", Main.gameSession.isMyTurn);
+				var tsize = 20;
+				var tscale = Math.min(window.CFLOW_TEXT_SCALE || 1, 1.15);
 				var text = new createjs.Text(
 					"R$ " + paydayAmount.toString(),
-					Math.round(20 * (window.CFLOW_TEXT_SCALE || 1)) + "px Arial",
+					Math.round(tsize * tscale) + "px Arial",
 					Colors.WHITE
 				);
 				text.x = this.transform.x;
@@ -12499,7 +12501,7 @@ var TemplateParser = (function () {
         if (!isNaN(Number(val))) {
             return Number(val);
         }
-        else if (typeof val === "string" && val.toLowerCase() === "true" || val.toLowerCase() === "false") {
+        else if (typeof val === "string" && (val.toLowerCase() === "true" || val.toLowerCase() === "false")) {
             return Boolean(val);
         }
         return val;
@@ -12533,18 +12535,38 @@ var TemplateParser = (function () {
         var TEXT_SCALE_SKIP = {
             buyText: true, passText: true, sellText: true,
             repayText: true, borrowText: true,
-            repayButtonText: true, loanButtonText: true
+            repayButtonText: true, loanButtonText: true,
+            exitButton1Text: true, exitButton2Text: true,
+            chatInput: true
         };
         var textScale = (
             id === "statementSheetTemplate" || TEXT_SCALE_SKIP[subID]
         ) ? 1 : (window.CFLOW_TEXT_SCALE || 1);
 
+        // Escala adaptativa por elemento (evita estouro, mantendo o maximo possivel)
+        // Caps por template/elemento para manter caber
+        var ELEM_CAP = {
+            'cardTemplate.cardTitle': 1.12,
+            'cardTemplate.cardDescription': 1.08,
+            'cardTemplate.cardInformation': 1.08,
+            'playerHeader.playerNameText': 1.12,
+            'playerHeader.playerStatusTagText': 1.12,
+            'lobbyScreen.lobbyTitle': 1.12,
+            'dreamSelectorScreen.chooseDreamDescText': 1.12,
+            'dreamSelectorScreen.chooseDreamText': 1.12,
+            'dreamSelectorScreen.selectDreamListTitle': 1.15,
+            'gameScreen.chatTitleText': 1.15,
+            'gameScreen.historyTextField': 1.15
+        };
+        var keyElem = id + '.' + subID;
+        if (ELEM_CAP[keyElem] !== undefined && textScale > ELEM_CAP[keyElem]) {
+            textScale = ELEM_CAP[keyElem];
+        }
+
         // console.log("colortest", color, subtemplate.color);
-        var text = new createjs.Text(
-            allCaps ? subtemplate.text.toUpperCase() : subtemplate.text,
-            font(subtemplate.bold ? "bold" : "", subtemplate.size, subtemplate.font, textScale),
-            color || subtemplate.color
-        );
+        var textStr = allCaps ? subtemplate.text.toUpperCase() : subtemplate.text;
+        var fontStr = font(subtemplate.bold ? "bold" : "", subtemplate.size, subtemplate.font, textScale);
+        var text = new createjs.Text(textStr, fontStr, color || subtemplate.color);
 
         text.x = (function () {
             switch (subtemplate.align) {
@@ -12563,6 +12585,31 @@ var TemplateParser = (function () {
         text.wordWrap = subtemplate.wordWrap;
         text.textAlign = subtemplate.align;
         text.textBaseline = subtemplate.vAlign;
+
+        // Auto-fit: reduz fonte ate caber na caixa (piso 1.0)
+        var MIN_SCALE = 1.0;
+        var curScale = textScale;
+        var baseSize = Number(subtemplate.size);
+        var iterations = 0;
+        while (iterations < 8) {
+            var fits = true;
+            if (text.wordWrap || text.multiline) {
+                var mh = text.getMeasuredHeight();
+                if (mh > Number(subtemplate.height) * 1.03) {
+                    fits = false;
+                }
+            } else {
+                var mw = text.getMeasuredWidth();
+                if (mw > Number(subtemplate.width) * 1.03) {
+                    fits = false;
+                }
+            }
+            if (fits) break;
+            curScale = Math.max(MIN_SCALE, curScale * 0.97);
+            text.font = font(subtemplate.bold ? "bold" : "", baseSize, subtemplate.font, curScale);
+            iterations++;
+        }
+
         return text;
     }
 
@@ -12570,7 +12617,7 @@ var TemplateParser = (function () {
         var SPACE = " ";
         if (scale === undefined || scale === null) { scale = (window.CFLOW_TEXT_SCALE || 1); }
         var scaledSize = Math.round(Number(size) * scale);
-        return (fontWeight + SPACE + scaledSize + "px" + SPACE + font)
+        return (fontWeight + SPACE + scaledSize + "px" + SPACE + (font || "Helvetica"))
     }
 
     function rect(id, subID, color) {
@@ -13062,7 +13109,7 @@ var LobbyScreen = (function () {
             m_divLobby.appendChild(m_ulLobby)
             m_domElement = new createjs.DOMElement(m_divLobby);
             m_domElement.x = lobbyTemplate.lobbyList.x;
-            m_domElement.y = lobbyTemplate.lobbyList.y - 40;
+            m_domElement.y = lobbyTemplate.lobbyList.y - 20;
             m_domElement.width = lobbyTemplate.lobbyList.width;
             m_domElement.height = lobbyTemplate.lobbyList.height;
 
@@ -13159,10 +13206,12 @@ var LobbyScreen = (function () {
             m_btnNewRoom.classList.add("odd")
             m_ulLobby.appendChild(m_btnNewRoom)
 
+            // header "Room"/"Sala" reposicionado para dentro da lista de salas (conforme solicitado)
             m_headerName = document.createElement("h2")
-
-            m_headerName.align = "center";
-            m_headerName.innerText = "Room"
+            m_headerName.className = "lobby-header"
+            m_headerName.align = "center"
+            m_headerName.innerText = "Salas"
+            // inserir antes do ul (para ficar acima da lista)
             m_divLobby.appendChild(m_headerName)
 
 

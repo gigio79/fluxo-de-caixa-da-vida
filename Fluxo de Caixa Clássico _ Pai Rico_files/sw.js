@@ -1,4 +1,4 @@
-var CACHE = 'fluxo-de-caixa-v4';
+var CACHE = 'fluxo-de-caixa-v5';
 var ASSETS = [
   "./2108039232768421",
   "./24px.svg",
